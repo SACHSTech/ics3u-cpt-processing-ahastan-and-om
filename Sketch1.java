@@ -1,36 +1,40 @@
 import processing.core.PApplet;
 
 public class Sketch1 extends PApplet {
+  public boolean contnue = false;
 	
-	
-  /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
   public void settings() {
-	// put your size call here
-    size(400, 400);
+    size(500, 500);
   }
 
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
+
   public void setup() {
-    background(210, 255, 173);
+    background(92, 150, 242);
   }
 
   /**
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
+    stroke(225);
+    fill(225);
+    rect(50,100, 70, 70);
 
-    stroke(255);
-    line(50, 125, 70, 50);  
+    if (contnue == true)
+    {
+      background(92, 150, 242);
+      rect(5, 100, 20, 40);
+    }
   }
+
+  public void mouseClicked()
+  {
+    if(mouseX > 50 && mouseX < 120 && mouseY > 100 && mouseY < 170)
+    {
+      contnue = true;
+    }
+  }
+
   
   // define other methods down here.
 }
