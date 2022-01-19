@@ -5,13 +5,14 @@ public class Sketch1 extends PApplet {
   PFont text;
   PFont title;
   PFont subtitle;
-  public boolean introductionMove = false;
   public String [] teams = {"Chicago Bulls", "Miami Heat", "Brooklyn Nets", "Cleveland Cavaliers", 
     "Milwaukee Bucks", "Philadelphia 76ers", "Charlotte Hornets", "Washington Wizards", "Toronto Raptors", "Boston Celtics", 
     "New York Knicks", "Atlanta Hawks", "Indiana Pacers", "Detroit Pistons", "Orlando Magic", "Phoenix Suns", "Golden State Warriors", "Memphis Grizzlies", "Utah Jazz", "Dallas Mavericks", 
     "Denver Nuggets", "Los Angeles Lakers", "Los Angeles Clippers", "Minnesota Timberwolves", "Portland Trail Blazers", 
     "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
   public String playerTeam;
+  public boolean screen1Move = false;
+  public boolean rosterScreen = false;
 
 	
   public void settings() {
@@ -35,13 +36,18 @@ public class Sketch1 extends PApplet {
 
     // Introduction Screen
     screen1();
+    // Home Screen
+    if (screen1Move == true){
+      screen2();
+    }
+    
     
   }
   
 
   public void mouseClicked()
   {
-    if(mouseX > 20 && mouseX < 460 && mouseY > 175 && mouseY < 460)
+    if(screen1Move == false)
     {
       int teamArray = 0;
       for (int h = 20; h < 460; h = h + 92)
@@ -51,11 +57,16 @@ public class Sketch1 extends PApplet {
           if (mouseX >= h && mouseX <= (h+92) && mouseY >= v && mouseY <= (v+50))
           {
             playerTeam = teams[teamArray];
-            introductionMove = true;
+            screen1Move = true;
           }
           teamArray++;
         }
       }
+    }
+
+    if(rosterScreen == false && mouseX >= 50 && mouseX <= 170 && mouseY >= 400 && mouseY <= 450)
+    {
+
     }
   }
 
@@ -90,14 +101,48 @@ public class Sketch1 extends PApplet {
         count++;
       }
     }
-
-    if (introductionMove == true)
-    {
-      background(92, 150, 242);
-      text(playerTeam, 110, 150);
-    }
   }
 
-  
+  public void screen2()
+  {
+    background(92, 150, 242);
+    textFont(title, 25);
+    fill(255,204,203);
+    text("NBA ULTIMATE", 150, 30);
+
+    // Game schedule
+    stroke(208, 224, 29);
+    fill(208, 224, 29);
+    rect(50, 50, 400, 100);
+
+    stroke(255);
+    fill(255);
+    line(50, 100, 450, 100);
+
+    for(int gameDisplay = 75; gameDisplay < 450; gameDisplay = gameDisplay + 170)
+    {
+      ellipse(gameDisplay, 100, 40, 20);
+    }
+
+    //Standings Preview
+    stroke(255);
+    noFill();
+    rect(50, 200, 150, 170);
+
+    //continue and roster buttons
+    stroke(255);
+    noFill();
+    rect(50, 400, 120, 50);
+    textFont(text, 30);
+    fill(18, 109, 128);
+    text("ROSTER", 80, 410, 92, 225);
+
+    stroke(255);
+    noFill();
+    rect (300, 400, 120, 50);
+    textFont(text, 30);
+    fill(18, 109, 128);
+    text("CONTINUE", 320, 410, 92, 225);
+  }
   // define other methods down here.
 }
