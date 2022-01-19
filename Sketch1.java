@@ -4,49 +4,95 @@ import processing.core.PFont;
 public class Sketch1 extends PApplet {
   PFont f;
   PFont title;
+  PFont subtitle;
   public boolean contnue = false;
+  public String [] teams = {"Chicago Bulls", "Miami Heat", "Brooklyn Nets", "Cleveland Cavaliers", 
+    "Milwaukee Bucks", "Philadelphia 76ers", "Charlotte Hornets", "Washington Wizards", "Toronto Raptors", "Boston Celtics", 
+    "New York Knicks", "Atlanta Hawks", "Indiana Pacers", "Detroit Pistons", "Orlando Magic", "Phoenix Suns", "Golden State Warriors", "Memphis Grizzlies", "Utah Jazz", "Dallas Mavericks", 
+    "Denver Nuggets", "Los Angeles Lakers", "Los Angeles Clippers", "Minnesota Timberwolves", "Portland Trail Blazers", 
+    "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
+  public String playerTeam;
+
 	
   public void settings() {
     size(500, 500);
+    String[] fontList = PFont.list();
+    printArray(fontList);
   }
 
 
   public void setup() {
     background(92, 150, 242);
-    f = createFont("Arial", 16, true);
-    title = createFont("Times New Roman", 75);
+    subtitle = createFont("DialogInput.italic", 16, true);
+    title = createFont("DialogInput.bolditalic", 75);
+    f = createFont("Playbill", 75);
   }
 
   /**
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
-    textFont(f, 20);
+
+    // Introduction Screen
+    textFont(subtitle, 20);
     fill(0);
-    text("Welcome to", 200, 20);
+    text("Welcome to", 200, 30);
     textFont(title, 27);
     fill(0);
     text("NBA ULTIMATE TEAM SIMULATOR", 40, 60);
-    textFont(f, 16);
+    textFont(f, 35);
     fill(18, 109, 128);
-    text("CHOOSE YOUR FAVORITE TEAM", 120, 200);
+    text("CHOOSE YOUR FAVORITE TEAM", 110, 150);
+
     
-    stroke(225);
-    fill(225);
-    rect(50,100, 70, 70);
+    int count = 0;
+    // Team grid
+    for (int i = 20; i < 460; i = i + 92)
+    {
+      for (int j = 175; j < 460; j = j + 50)
+      {
+        stroke(0);
+        fill(225);
+        rect(i,j,92,50);
+        
+        
+        textFont(f, 22);
+        fill(18, 109, 128);
+        text(teams[count], i, j, 92, 225);
+
+        count++;
+      }
+    }
+  
+    // stroke(225);
+    // fill(225);
+    // rect(50,100, 70, 70);
 
     if (contnue == true)
     {
       background(92, 150, 242);
-      rect(5, 100, 20, 40);
+      text(playerTeam, 110, 150);
     }
   }
+  
 
   public void mouseClicked()
   {
-    if(mouseX > 50 && mouseX < 120 && mouseY > 100 && mouseY < 170)
+    if(mouseX > 20 && mouseX < 460 && mouseY > 175 && mouseY < 460)
     {
-      contnue = true;
+      int coun = 0;
+      for (int h = 20; h < 460; h = h + 92)
+      {
+        for (int v = 175; v < 460; v = v + 50)
+        {
+          if (mouseX >= h && mouseX <= (h+92) && mouseY >= v && mouseY <= (v+50))
+          {
+            playerTeam = teams[coun];
+            contnue = true;
+          }
+          coun++;
+        }
+      }
     }
   }
 
