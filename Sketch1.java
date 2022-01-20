@@ -12,7 +12,8 @@ public class Sketch1 extends PApplet {
     "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
   public String playerTeam;
   public boolean screen1Move = false;
-  public boolean rosterScreen = false;
+  public boolean rosterScreenMove = false;
+  public boolean continueMove = false;
 
 	
   public void settings() {
@@ -39,11 +40,16 @@ public class Sketch1 extends PApplet {
     // Home Screen
     if (screen1Move == true){
       screen2();
-    }
-    
-    
+      if (rosterScreenMove == true)
+      {
+        rosterScreen();
+      }
+      if(continueMove == true)
+      {
+        continueScreen();
+      }
+    } 
   }
-  
 
   public void mouseClicked()
   {
@@ -64,10 +70,25 @@ public class Sketch1 extends PApplet {
       }
     }
 
-    if(rosterScreen == false && mouseX >= 50 && mouseX <= 170 && mouseY >= 400 && mouseY <= 450)
+    if(rosterScreenMove == false && mouseX >= 50 && mouseX <= 170 && mouseY >= 400 && mouseY <= 450)
     {
-
+      rosterScreenMove = true;
     }
+
+    if(rosterScreenMove == true && mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
+      {
+        rosterScreenMove = false;
+      }
+
+    if(continueMove == false && mouseX >= 300 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+    {
+      continueMove = true;
+    }
+
+    if(mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
+      {
+        continueMove = false;
+      }
   }
 
   public void screen1()
@@ -92,7 +113,6 @@ public class Sketch1 extends PApplet {
         stroke(0);
         fill(225);
         rect(i,j,92,50);
-        
         
         textFont(text, 22);
         fill(18, 109, 128);
@@ -144,5 +164,28 @@ public class Sketch1 extends PApplet {
     fill(18, 109, 128);
     text("CONTINUE", 320, 410, 92, 225);
   }
-  // define other methods down here.
+
+  public void rosterScreen()
+  {
+    background(92, 150, 242);
+    stroke(255);
+    noFill();
+    rect (180, 400, 120, 50);
+    textFont(text, 30);
+    fill(18, 109, 128);
+    text("BACK", 200, 410, 92, 225);
+  }
+
+  public void continueScreen()
+  {
+    background(92, 150, 242);
+    background(92, 150, 242);
+    stroke(255);
+    noFill();
+    rect (180, 400, 120, 50);
+    textFont(text, 30);
+    fill(18, 109, 128);
+    text("BACK", 200, 410, 92, 225);
+  }
+
 }
