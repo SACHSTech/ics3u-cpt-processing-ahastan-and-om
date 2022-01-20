@@ -5,13 +5,19 @@ public class Sketch1 extends PApplet {
   PFont text;
   PFont title;
   PFont subtitle;
-  public String [] teams = {"ChicagoBulls", "Miami Heat", "Brooklyn Nets", "Cleveland Cavaliers", 
+  public String [] teams = {"Chicago Bulls", "Miami Heat", "Brooklyn Nets", "Cleveland Cavaliers", 
   "Milwaukee Bucks", "Philadelphia 76ers", "Charlotte Hornets", "Washington Wizards", "Toronto Raptors", "Boston Celtics", 
   "New York Knicks", "Atlanta Hawks", "Indiana Pacers", "Detroit Pistons", "Orlando Magic", "Phoenix Suns", "Golden State Warriors", "Memphis Grizzlies", "Utah Jazz", "Dallas Mavericks", 
   "Denver Nuggets", "Los Angeles Lakers", "Los Angeles Clippers", "Minnesota Timberwolves", "Portland Trail Blazers", 
   "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
-  public String [] ChicagoBulls = {"Lonzo Ball", "Demar Derozan", "Zach Lavine", "Nikola Vucevic", "Patrick Williams"};
+  public String[][] players = new String[29][4];
+  players[0][0] = "Lonzo Ball";
+  players[0][1] = "Demar Derozan";
+  players[0][2] = "Zach Lavine";
+  players[0][3] = "Nikola Vucevic";
+  players[0][4] = "Patrick Williams";
   public String playerTeam;
+  public int playerTeamCount;
   public boolean screen1Move = false;
   public boolean rosterScreenMove = false;
   public boolean continueMove = false;
@@ -66,6 +72,7 @@ public class Sketch1 extends PApplet {
           if (mouseX >= h && mouseX <= (h+92) && mouseY >= v && mouseY <= (v+50))
           {
             playerTeam = teams[teamArray];
+            playerTeamCount = teamArray;
             screen1Move = true;
           }
           teamArray++;
@@ -182,6 +189,8 @@ public class Sketch1 extends PApplet {
     textFont(text, 30);
     fill(18, 109, 128);
     text("BACK", 230, 410, 92, 225);
+
+    
   }
 
   //Continue Screen
