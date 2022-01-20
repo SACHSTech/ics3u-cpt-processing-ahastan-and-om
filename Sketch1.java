@@ -5,15 +5,17 @@ public class Sketch1 extends PApplet {
   PFont text;
   PFont title;
   PFont subtitle;
-  public String [] teams = {"Chicago Bulls", "Miami Heat", "Brooklyn Nets", "Cleveland Cavaliers", 
-    "Milwaukee Bucks", "Philadelphia 76ers", "Charlotte Hornets", "Washington Wizards", "Toronto Raptors", "Boston Celtics", 
-    "New York Knicks", "Atlanta Hawks", "Indiana Pacers", "Detroit Pistons", "Orlando Magic", "Phoenix Suns", "Golden State Warriors", "Memphis Grizzlies", "Utah Jazz", "Dallas Mavericks", 
-    "Denver Nuggets", "Los Angeles Lakers", "Los Angeles Clippers", "Minnesota Timberwolves", "Portland Trail Blazers", 
-    "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
+  public String [] teams = {"ChicagoBulls", "Miami Heat", "Brooklyn Nets", "Cleveland Cavaliers", 
+  "Milwaukee Bucks", "Philadelphia 76ers", "Charlotte Hornets", "Washington Wizards", "Toronto Raptors", "Boston Celtics", 
+  "New York Knicks", "Atlanta Hawks", "Indiana Pacers", "Detroit Pistons", "Orlando Magic", "Phoenix Suns", "Golden State Warriors", "Memphis Grizzlies", "Utah Jazz", "Dallas Mavericks", 
+  "Denver Nuggets", "Los Angeles Lakers", "Los Angeles Clippers", "Minnesota Timberwolves", "Portland Trail Blazers", 
+  "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
+  public String [] ChicagoBulls = {"Lonzo Ball", "Demar Derozan", "Zach Lavine", "Nikola Vucevic", "Patrick Williams"};
   public String playerTeam;
   public boolean screen1Move = false;
   public boolean rosterScreenMove = false;
   public boolean continueMove = false;
+  public int gameCycle = 0;
 
 	
   public void settings() {
@@ -53,6 +55,7 @@ public class Sketch1 extends PApplet {
 
   public void mouseClicked()
   {
+    //Introduction Page Commands
     if(screen1Move == false)
     {
       int teamArray = 0;
@@ -70,6 +73,7 @@ public class Sketch1 extends PApplet {
       }
     }
 
+    //Homepage commands
     if(rosterScreenMove == false && mouseX >= 50 && mouseX <= 170 && mouseY >= 400 && mouseY <= 450)
     {
       rosterScreenMove = true;
@@ -89,8 +93,10 @@ public class Sketch1 extends PApplet {
       {
         continueMove = false;
       }
+
   }
 
+  //Introduction Screen
   public void screen1()
   {
     textFont(subtitle, 20);
@@ -123,6 +129,7 @@ public class Sketch1 extends PApplet {
     }
   }
 
+  //Homepage
   public void screen2()
   {
     background(92, 150, 242);
@@ -165,6 +172,7 @@ public class Sketch1 extends PApplet {
     text("CONTINUE", 320, 410, 92, 225);
   }
 
+  //Roster Screen
   public void rosterScreen()
   {
     background(92, 150, 242);
@@ -173,9 +181,10 @@ public class Sketch1 extends PApplet {
     rect (180, 400, 120, 50);
     textFont(text, 30);
     fill(18, 109, 128);
-    text("BACK", 200, 410, 92, 225);
+    text("BACK", 230, 410, 92, 225);
   }
 
+  //Continue Screen
   public void continueScreen()
   {
     background(92, 150, 242);
@@ -185,7 +194,7 @@ public class Sketch1 extends PApplet {
     rect (180, 400, 120, 50);
     textFont(text, 30);
     fill(18, 109, 128);
-    text("BACK", 200, 410, 92, 225);
+    text("BACK", 230, 410, 92, 225);
   }
 
 }
