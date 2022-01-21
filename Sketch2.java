@@ -10,6 +10,7 @@ public class Sketch2 extends PApplet {
     "New York Knicks", "Atlanta Hawks", "Indiana Pacers", "Detroit Pistons", "Orlando Magic", "Phoenix Suns", "Golden State Warriors", "Memphis Grizzlies", "Utah Jazz", "Dallas Mavericks", 
     "Denver Nuggets", "Los Angeles Lakers", "Los Angeles Clippers", "Minnesota Timberwolves", "Portland Trail Blazers", 
     "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
+  public String[][] players = new String[29][4];
   public String playerTeam;
   public boolean screen1Move = false;
   public boolean rosterScreenMove = false;
@@ -207,6 +208,9 @@ public class Sketch2 extends PApplet {
   public String [] OrlandoMagic = {"Cole Anthony", "Jalen Suggs", "Franz Wagner", "Wendell Carter Jr", "Mo Bamba"};
   public String [] PhoenixSuns = {"Chris Paul", "Devin Booker", "Mikal Bridges", "Jae Crowder", "Deandre Ayton"};
   public String [] GoldenStateWarriors = {"Steph Curry", "Klay Thompson", "Andrew Wiggins", "Draymond Green", "James Wiseman"};
+  public String [] MemphisGrizzlies = {"Ja Morant", "Desmond Bane", "Kyle Anderson", "Jaren Jackson Jr", "Steven Adams"};
+  public String [] UtahJazz = {"Mike Conley", "Donovan Mitchell", "Bojan Bogdanovic", "Eric Paschall", "Rudy Gobert"};
+  public String [] DallasMavericks = {"Luka Doncic", "Jalen Brunson", "Dorian Finney Smith", "Kristaps Porzingis", "Maxi Kleber"};
   public String [] DenverNuggets = {"Jamal Murray", "Will Barton", "Michael Porter Jr", "Aaron Gordon", "Nikola Jokic"};
   public String [] LosAngelesLakers = {"Russell Westbrook", "Malik Monk", "Lebron James", "Stanley Johnson", "Anthony Davis"};
   public String [] LosAngelesClippers = {"Reggie Jackson", "Paul George", "Kawhi Leonard", "Serge Ibaka", "Ivica Zubac"};
@@ -216,10 +220,99 @@ public class Sketch2 extends PApplet {
   public String [] SanAntonioSpurs = {"Dejounte Murray", "Derrick White", "Doug McDermott", "Keldon Johnson", "Jakob Poeltl"};
   public String [] NewOrleansPelicans = {"Devonte Graham", "Brandon Ingram", "Josh Hart", "Zion Williamson", "Jonas Valancunias"};
   public String [] OklahomaCityThunder = {"Shai Gilgeous Alexander", "Josh Giddey", "Lugentz Dort", "Darius Bazley", "Derrick Favors"};
-  public String [] MemphisGrizzlies = {"Ja Morant", "Desmond Bane", "Kyle Anderson", "Jaren Jackson Jr", "Steven Adams"};
-  public String [] UtahJazz = {"Mike Conley", "Donovan Mitchell", "Bojan Bogdanovic", "Eric Paschall", "Rudy Gobert"};
-  public String [] DallasMavericks = {"Luka Doncic", "Jalen Brunson", "Dorian Finney Smith", "Kristaps Porzingis", "Maxi Kleber"};
   public String [] HoustonCityRockets = {"Kevin Porter Jr", "Jalen Green", "Eric Gordon", "Ja'Sean Tate", "Christian Wood"};
+ 
+{
+  // Suns
+  players[15][0] = "Chris Paul";
+  players[15][1] = "Devin Booker";
+  players[15][2] = "Mikal Bridges";
+  players[15][3] = "Jae Crowder";
+  players[15][4] = "Deandre Ayton";
+  // Warriors
+  players[16][0] = "Steph Curry";
+  players[16][1] = "Klay Thompson";
+  players[16][2] = "Andrew Wiggins";
+  players[16][3] = "Draymond Green";
+  players[16][4] = "James Wiseman";
+  // Grizzlies
+  players[17][0] = "Ja Morant";
+  players[17][1] = "Desmond Bane";
+  players[17][2] = "Kyle Anderson";
+  players[17][3] = "Jaren Jackson Jr";
+  players[17][4] = "Steven Adams";
+  // Jazz
+  players[17][0] = "Mike Conley"; 
+  players[17][1] = "Donovan Mitchell";
+  players[17][2] = "Bojan Bogdanovic";
+  players[17][3] = "Eric Paschall";
+  players[17][4] = "Rudy Gobert";
+  // Mavs
+  players[17][0] = "Luka Doncic";
+  players[17][1] = "Jalen Brunson";
+  players[17][2] = "Dorian Finney Smith"; 
+  players[17][3] = "Kristaps Porzingis";
+  players[17][4] = "Maxi Kleber";
+  // Nuggets
+  players[17][0] = "Jamal Murray";
+  players[17][1] = "Will Barton";
+  players[17][2] = "Michael Porter Jr"; 
+  players[17][3] = "Aaron Gordon";
+  players[17][4] = "Nikola Jokic";
+  // Lakers
+  players[17][0] = "Russell Westbrook";
+  players[17][1] = "Malik Monk";
+  players[17][2] = "Lebron James"; 
+  players[17][3] = "Stanley Johnson";
+  players[17][4] = "Anthony Davis";
+  // Clippers
+  players[17][0] = "Reggie Jackson";
+  players[17][1] = "Paul George";
+  players[17][2] = "Kawhi Leonard"; 
+  players[17][3] = "Serge Ibaka";
+  players[17][4] = "Ivica Zubac";
+  // Timberwolves
+  players[17][0] = "D'Angelo Russell";
+  players[17][1] = "Malik Beasley";
+  players[17][2] = "Anthony Edwards"; 
+  players[17][3] = "Jarred Vanderbilt";
+  players[17][4] = "Karl - Anthony Towns";
+  // Blazers
+  players[17][0] = "Damian Lillard";
+  players[17][1] = "CJ Mccollum";
+  players[17][2] = "Norman Powell"; 
+  players[17][3] = "Larry Nance Jr";
+  players[17][4] = "Jusuf Nurkic";
+  // Kings
+  players[17][0] = "De'Aaron Fox";
+  players[17][1] = "Buddy Hield";
+  players[17][2] = "Tyrese Haliburton"; 
+  players[17][3] = "Harrison Barnes";
+  players[17][4] = "Marvin Bagley Jr";
+  // Spurs
+  players[17][0] = "Dejounte Murray";
+  players[17][1] = "Derrick White";
+  players[17][2] = "Keldon Johnson"; 
+  players[17][3] = "Keldon Johnson";
+  players[17][4] = "Jakob Poeltl";
+  // Pelicans
+  players[17][0] = "Devonte Graham";
+  players[17][1] = "Brandon Ingram";
+  players[17][2] = "Michael Porter Jr"; 
+  players[17][3] = "Josh Hart";
+  players[17][4] = "Jonas Valancunias";
+  // Thunder
+  players[17][0] = "Shai Gilgeous Alexander";
+  players[17][1] = "Josh Giddey";
+  players[17][2] = "Lugentz Dort"; 
+  players[17][3] = "Darius Bazley";
+  players[17][4] = "Derrick Favors";
+  // Rockets
+  players[17][0] = "Kevin Porter Jr";
+  players[17][1] = "Jalen Green";
+  players[17][2] = "Eric Gordon"; 
+  players[17][3] = "Ja'Sean Tate";
+  players[17][4] = "Christian Wood";
 }
-  
+}
  
