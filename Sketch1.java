@@ -10,7 +10,7 @@ public class Sketch1 extends PApplet {
   "New York Knicks", "Atlanta Hawks", "Indiana Pacers", "Detroit Pistons", "Orlando Magic", "Phoenix Suns", "Golden State Warriors", "Memphis Grizzlies", "Utah Jazz", "Dallas Mavericks", 
   "Denver Nuggets", "Los Angeles Lakers", "Los Angeles Clippers", "Minnesota Timberwolves", "Portland Trail Blazers", 
   "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
-  public String[][] players = new String[29][4];
+  public String[][] players = new String[29][4] 
   players[0][0] = "Lonzo Ball";
   players[0][1] = "Demar Derozan";
   players[0][2] = "Zach Lavine";
@@ -206,4 +206,5 @@ public class Sketch1 extends PApplet {
     text("BACK", 230, 410, 92, 225);
   }
 
+  }
 }

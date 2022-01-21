@@ -293,14 +293,14 @@ public class Sketch2 extends PApplet {
   players[17][0] = "Dejounte Murray";
   players[17][1] = "Derrick White";
   players[17][2] = "Keldon Johnson"; 
-  players[17][3] = "Keldon Johnson";
+  players[17][3] = "Keldon Johnson";    
   players[17][4] = "Jakob Poeltl";
   // Pelicans
   players[17][0] = "Devonte Graham";
   players[17][1] = "Brandon Ingram";
   players[17][2] = "Michael Porter Jr"; 
   players[17][3] = "Josh Hart";
-  players[17][4] = "Jonas Valancunias";
+  players[17][4] = "Jonas Valancunias"; 
   // Thunder
   players[17][0] = "Shai Gilgeous Alexander";
   players[17][1] = "Josh Giddey";
