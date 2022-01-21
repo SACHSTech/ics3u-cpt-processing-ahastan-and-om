@@ -242,77 +242,77 @@ public class Sketch2 extends PApplet {
   players[17][3] = "Jaren Jackson Jr";
   players[17][4] = "Steven Adams";
   // Jazz
-  players[17][0] = "Mike Conley"; 
-  players[17][1] = "Donovan Mitchell";
-  players[17][2] = "Bojan Bogdanovic";
-  players[17][3] = "Eric Paschall";
-  players[17][4] = "Rudy Gobert";
+  players[18][0] = "Mike Conley"; 
+  players[18][1] = "Donovan Mitchell";
+  players[18][2] = "Bojan Bogdanovic";
+  players[18][3] = "Eric Paschall";
+  players[18][4] = "Rudy Gobert";
   // Mavs
-  players[17][0] = "Luka Doncic";
-  players[17][1] = "Jalen Brunson";
-  players[17][2] = "Dorian Finney Smith"; 
-  players[17][3] = "Kristaps Porzingis";
-  players[17][4] = "Maxi Kleber";
+  players[19][0] = "Luka Doncic";
+  players[19][1] = "Jalen Brunson";
+  players[19][2] = "Dorian Finney Smith"; 
+  players[19][3] = "Kristaps Porzingis";
+  players[19][4] = "Maxi Kleber";
   // Nuggets
-  players[17][0] = "Jamal Murray";
-  players[17][1] = "Will Barton";
-  players[17][2] = "Michael Porter Jr"; 
-  players[17][3] = "Aaron Gordon";
-  players[17][4] = "Nikola Jokic";
+  players[20][0] = "Jamal Murray";
+  players[20][1] = "Will Barton";
+  players[20][2] = "Michael Porter Jr"; 
+  players[20][3] = "Aaron Gordon";
+  players[20][4] = "Nikola Jokic";
   // Lakers
-  players[17][0] = "Russell Westbrook";
-  players[17][1] = "Malik Monk";
-  players[17][2] = "Lebron James"; 
-  players[17][3] = "Stanley Johnson";
-  players[17][4] = "Anthony Davis";
+  players[21][0] = "Russell Westbrook";
+  players[21][1] = "Malik Monk";
+  players[21][2] = "Lebron James"; 
+  players[21][3] = "Stanley Johnson";
+  players[21][4] = "Anthony Davis";
   // Clippers
-  players[17][0] = "Reggie Jackson";
-  players[17][1] = "Paul George";
-  players[17][2] = "Kawhi Leonard"; 
-  players[17][3] = "Serge Ibaka";
-  players[17][4] = "Ivica Zubac";
+  players[22][0] = "Reggie Jackson";
+  players[22][1] = "Paul George";
+  players[22][2] = "Kawhi Leonard"; 
+  players[22][3] = "Serge Ibaka";
+  players[22][4] = "Ivica Zubac";
   // Timberwolves
-  players[17][0] = "D'Angelo Russell";
-  players[17][1] = "Malik Beasley";
-  players[17][2] = "Anthony Edwards"; 
-  players[17][3] = "Jarred Vanderbilt";
-  players[17][4] = "Karl - Anthony Towns";
+  players[23][0] = "D'Angelo Russell";
+  players[23][1] = "Malik Beasley";
+  players[23][2] = "Anthony Edwards"; 
+  players[23][3] = "Jarred Vanderbilt";
+  players[23][4] = "Karl - Anthony Towns";
   // Blazers
-  players[17][0] = "Damian Lillard";
-  players[17][1] = "CJ Mccollum";
-  players[17][2] = "Norman Powell"; 
-  players[17][3] = "Larry Nance Jr";
-  players[17][4] = "Jusuf Nurkic";
+  players[24][0] = "Damian Lillard";
+  players[24][1] = "CJ Mccollum";
+  players[24][2] = "Norman Powell"; 
+  players[24][3] = "Larry Nance Jr";
+  players[24][4] = "Jusuf Nurkic";
   // Kings
-  players[17][0] = "De'Aaron Fox";
-  players[17][1] = "Buddy Hield";
-  players[17][2] = "Tyrese Haliburton"; 
-  players[17][3] = "Harrison Barnes";
-  players[17][4] = "Marvin Bagley Jr";
+  players[25][0] = "De'Aaron Fox";
+  players[25][1] = "Buddy Hield";
+  players[25][2] = "Tyrese Haliburton"; 
+  players[25][3] = "Harrison Barnes";
+  players[25][4] = "Marvin Bagley Jr";
   // Spurs
-  players[17][0] = "Dejounte Murray";
-  players[17][1] = "Derrick White";
-  players[17][2] = "Keldon Johnson"; 
-  players[17][3] = "Keldon Johnson";    
-  players[17][4] = "Jakob Poeltl";
+  players[26][0] = "Dejounte Murray";
+  players[26][1] = "Derrick White";
+  players[26][2] = "Keldon Johnson"; 
+  players[26][3] = "Keldon Johnson";    
+  players[26][4] = "Jakob Poeltl";
   // Pelicans
-  players[17][0] = "Devonte Graham";
-  players[17][1] = "Brandon Ingram";
-  players[17][2] = "Michael Porter Jr"; 
-  players[17][3] = "Josh Hart";
-  players[17][4] = "Jonas Valancunias"; 
+  players[27][0] = "Devonte Graham";
+  players[27][1] = "Brandon Ingram";
+  players[27][2] = "Michael Porter Jr"; 
+  players[27][3] = "Josh Hart";
+  players[27][4] = "Jonas Valancunias"; 
   // Thunder
-  players[17][0] = "Shai Gilgeous Alexander";
-  players[17][1] = "Josh Giddey";
-  players[17][2] = "Lugentz Dort"; 
-  players[17][3] = "Darius Bazley";
-  players[17][4] = "Derrick Favors";
-  // Rockets
-  players[17][0] = "Kevin Porter Jr";
-  players[17][1] = "Jalen Green";
-  players[17][2] = "Eric Gordon"; 
-  players[17][3] = "Ja'Sean Tate";
-  players[17][4] = "Christian Wood";
+  players[28][0] = "Shai Gilgeous Alexander";
+  players[28][1] = "Josh Giddey";
+  players[28][2] = "Lugentz Dort"; 
+  players[28][3] = "Darius Bazley";
+  players[28][4] = "Derrick Favors";
+  // Rockets 
+  players[29][0] = "Kevin Porter Jr";
+  players[29][1] = "Jalen Green";
+  players[29][2] = "Eric Gordon"; 
+  players[29][3] = "Ja'Sean Tate";
+  players[29][4] = "Christian Wood";
 }
 }
  
