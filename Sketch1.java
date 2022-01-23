@@ -1,5 +1,6 @@
 import processing.core.PApplet;
 import processing.core.PFont;
+import java.util.ArrayList;
 
 public class Sketch1 extends PApplet {
   PFont text;
@@ -10,7 +11,8 @@ public class Sketch1 extends PApplet {
   "New York Knicks", "Atlanta Hawks", "Indiana Pacers", "Detroit Pistons", "Orlando Magic", "Phoenix Suns", "Golden State Warriors", "Memphis Grizzlies", "Utah Jazz", "Dallas Mavericks", 
   "Denver Nuggets", "Los Angeles Lakers", "Los Angeles Clippers", "Minnesota Timberwolves", "Portland Trail Blazers", 
   "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
-  public String[][] players = new String[29][5];
+  public ArrayList <String> possibleTeams = new ArrayList <String>();
+  public String[][] players = new String[30][5];
   public String playerTeam;
   public int playerTeamCount;
   public boolean screen1Move = false;
@@ -172,6 +174,28 @@ public class Sketch1 extends PApplet {
     textFont(text, 30);
     fill(18, 109, 128);
     text("CONTINUE", 320, 410, 92, 225);
+
+    for (int i = 0; i <= 11; i++)
+    {
+      int number = (int) random(0,29);
+      if (!playerTeam.equals(teams[number]))
+      {
+        possibleTeams.add(teams[number]);
+      }
+    }
+
+    int i = 0;
+    for (int positionX = 65; positionX < 450; positionX = positionX + 170)
+    {
+      String team = possibleTeams.get(i);
+      textFont(text, 20);
+      fill(18, 109, 128);
+      text(team, positionX, 100, 92, 225);
+      i++;
+    }
+    
+
+    
   }
 
   //Roster Screen
@@ -297,6 +321,97 @@ public class Sketch1 extends PApplet {
     players[15][3] = "Jae Crowder";
     players[15][4] = "Deandre Ayton";
 
+    // Suns
+  players[15][0] = "Chris Paul";
+  players[15][1] = "Devin Booker";
+  players[15][2] = "Mikal Bridges";
+  players[15][3] = "Jae Crowder";
+  players[15][4] = "Deandre Ayton";
+  // Warriors
+  players[16][0] = "Steph Curry";
+  players[16][1] = "Klay Thompson";
+  players[16][2] = "Andrew Wiggins";
+  players[16][3] = "Draymond Green";
+  players[16][4] = "James Wiseman";
+  // Grizzlies
+  players[17][0] = "Ja Morant";
+  players[17][1] = "Desmond Bane";
+  players[17][2] = "Kyle Anderson";
+  players[17][3] = "Jaren Jackson Jr";
+  players[17][4] = "Steven Adams";
+  // Jazz
+  players[18][0] = "Mike Conley"; 
+  players[18][1] = "Donovan Mitchell";
+  players[18][2] = "Bojan Bogdanovic";
+  players[18][3] = "Eric Paschall";
+  players[18][4] = "Rudy Gobert";
+  // Mavs
+  players[19][0] = "Luka Doncic";
+  players[19][1] = "Jalen Brunson";
+  players[19][2] = "Dorian Finney Smith"; 
+  players[19][3] = "Kristaps Porzingis";
+  players[19][4] = "Maxi Kleber";
+  // Nuggets
+  players[20][0] = "Jamal Murray";
+  players[20][1] = "Will Barton";
+  players[20][2] = "Michael Porter Jr"; 
+  players[20][3] = "Aaron Gordon";
+  players[20][4] = "Nikola Jokic";
+  // Lakers
+  players[21][0] = "Russell Westbrook";
+  players[21][1] = "Malik Monk";
+  players[21][2] = "Lebron James"; 
+  players[21][3] = "Stanley Johnson";
+  players[21][4] = "Anthony Davis";
+  // Clippers
+  players[22][0] = "Reggie Jackson";
+  players[22][1] = "Paul George";
+  players[22][2] = "Kawhi Leonard"; 
+  players[22][3] = "Serge Ibaka";
+  players[22][4] = "Ivica Zubac";
+  // Timberwolves
+  players[23][0] = "D'Angelo Russell";
+  players[23][1] = "Malik Beasley";
+  players[23][2] = "Anthony Edwards"; 
+  players[23][3] = "Jarred Vanderbilt";
+  players[23][4] = "Karl - Anthony Towns";
+  // Blazers
+  players[24][0] = "Damian Lillard";
+  players[24][1] = "CJ Mccollum";
+  players[24][2] = "Norman Powell"; 
+  players[24][3] = "Larry Nance Jr";
+  players[24][4] = "Jusuf Nurkic";
+  // Kings
+  players[25][0] = "De'Aaron Fox";
+  players[25][1] = "Buddy Hield";
+  players[25][2] = "Tyrese Haliburton"; 
+  players[25][3] = "Harrison Barnes";
+  players[25][4] = "Marvin Bagley Jr";
+  // Spurs
+  players[26][0] = "Dejounte Murray";
+  players[26][1] = "Derrick White";
+  players[26][2] = "Keldon Johnson"; 
+  players[26][3] = "Keldon Johnson";    
+  players[26][4] = "Jakob Poeltl";
+  // Pelicans
+  players[27][0] = "Devonte Graham";
+  players[27][1] = "Brandon Ingram";
+  players[27][2] = "Michael Porter Jr"; 
+  players[27][3] = "Josh Hart";
+  players[27][4] = "Jonas Valancunias"; 
+  // Thunder
+  players[28][0] = "Shai Gilgeous Alexander";
+  players[28][1] = "Josh Giddey";
+  players[28][2] = "Lugentz Dort"; 
+  players[28][3] = "Darius Bazley";
+  players[28][4] = "Derrick Favors";
+  // Rockets
+  players[29][0] = "Kevin Porter Jr";
+  players[29][1] = "Jalen Green";
+  players[29][2] = "Eric Gordon"; 
+  players[29][3] = "Ja'Sean Tate";
+  players[29][4] = "Christian Wood";
+
 
     for (int p = 0; p <= 29; p++)
     {
@@ -321,13 +436,6 @@ public class Sketch1 extends PApplet {
         textFont(text, 30);
         fill(18, 109, 128);
         text(players[p][4], 275, 250, 92, 225);
-        
-        // for (int o = 0; o <= 4; o++)
-        // {
-        //   textFont(text, 30);
-        //   fill(18, 109, 128);
-        //   text(players[p][o], 230, 200, 92, 225);
-        // }
       }
     }
   }
@@ -344,5 +452,5 @@ public class Sketch1 extends PApplet {
     fill(18, 109, 128);
     text("BACK", 230, 410, 92, 225);
   }
-
-}
+  
+  }
