@@ -13,11 +13,13 @@ public class Sketch1 extends PApplet {
   "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
   public ArrayList <String> possibleTeams = new ArrayList <String>();
   public String[][] players = new String[30][5];
+  public int[] rand = new int [12];
   public String playerTeam;
   public int playerTeamCount;
   public boolean screen1Move = false;
   public boolean rosterScreenMove = false;
   public boolean continueMove = false;
+  public boolean playMove = false;
   public int gameCycle = 0;
 
 	
@@ -25,6 +27,10 @@ public class Sketch1 extends PApplet {
     size(500, 500);
     String[] fontList = PFont.list();
     printArray(fontList);
+    for (int i = 0; i < rand.length; i++)
+    {
+      rand[i] = (int) random(0,29);
+    }
   }
 
 
@@ -52,6 +58,10 @@ public class Sketch1 extends PApplet {
       if(continueMove == true)
       {
         continueScreen();
+        if (playMove == true)
+        {
+          playFunction();
+        }
       }
     } 
   }
@@ -93,11 +103,24 @@ public class Sketch1 extends PApplet {
       continueMove = true;
     }
 
-    if(continueMove == true && mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
+    if(continueMove == true)
       {
-        continueMove = false;
-      }
+        if (mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
+        {
+          continueMove = false;
+        }
 
+        if (mouseX >= 330 && mouseX <= 450 && mouseY >= 330 && mouseY <= 380)
+        {
+          playMove = true;
+          if (mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
+          {
+            playMove = false;
+            
+          }
+        }
+      }
+    
   }
 
   //Introduction Screen
@@ -175,15 +198,17 @@ public class Sketch1 extends PApplet {
     fill(18, 109, 128);
     text("CONTINUE", 320, 410, 92, 225);
 
-    for (int i = 0; i <= 11; i++)
-    {
-      int number = (int) random(0,29);
-      if (!playerTeam.equals(teams[number]))
+    if (gameCycle == 0){
+      for (int i = 0; i <= 11; i++)
       {
-        possibleTeams.add(teams[number]);
+        if (!playerTeam.equals(teams[rand[i]]))
+        {
+          possibleTeams.add(teams[rand[i]]);
+        }
       }
-    }
+  }
 
+    printArray(possibleTeams);
     int i = 0;
     for (int positionX = 65; positionX < 450; positionX = positionX + 170)
     {
@@ -193,9 +218,6 @@ public class Sketch1 extends PApplet {
       text(team, positionX, 100, 92, 225);
       i++;
     }
-    
-
-    
   }
 
   //Roster Screen
@@ -444,13 +466,45 @@ public class Sketch1 extends PApplet {
   public void continueScreen()
   {
     background(92, 150, 242);
-    background(92, 150, 242);
     stroke(255);
     noFill();
     rect (180, 400, 120, 50);
     textFont(text, 30);
     fill(18, 109, 128);
     text("BACK", 230, 410, 92, 225);
+
+    textFont(text, 30);
+    fill(18, 109, 128);
+    text(playerTeam, 50, 150, 92, 225);
+
+    textFont(text, 80);
+    fill(18, 109, 128);
+    text("VS", 220, 150, 92, 225);
+
+    textFont(text, 30);
+    fill(18, 109, 128);
+    text(possibleTeams.get(gameCycle), 320, 150, 92, 225);
+
+    stroke(255);
+    noFill();
+    rect (330, 330, 120, 50);
+    textFont(text, 30);
+    fill(18, 109, 128);
+    text("PLAY", 370, 340, 92, 225);
+  }
+
+  // When the user presses play, simulation
+  public void playFunction()
+  {
+    background(92, 150, 242);
+    possibleTeams.remove(gameCycle);
+    gameCycle = gameCycle + 1;
+
+    rect (180, 400, 120, 50);
+    textFont(text, 30);
+    fill(18, 109, 128);
+    text("BACK", 230, 410, 92, 225);
+    
   }
   
   }
