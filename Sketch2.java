@@ -11,9 +11,37 @@ public class Sketch2 extends PApplet {
     "Denver Nuggets", "Los Angeles Lakers", "Los Angeles Clippers", "Minnesota Timberwolves", "Portland Trail Blazers", 
     "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
   public String[][] players = new String[29][4];
-  public String playerTeam;
+  public String playerTeam;public String [] ChicagoBulls = {"Lonzo Ball", "Demar Derozan", "Zach Lavine", "Nikola Vucevic", "Patrick Williams"};
+  public String [] MiamiHeat = {"Kyle Lowry", "Duncan Robinson", "Jimmy Butler", "PJ Tucker", "Bam Adebayo"};
+  public String [] BrooklynNets = {"Kyrie Irving", "James Harden", "Kevin Durant", "Blake Griffin", "Nic Claxton"};
+  public String [] ClevelandCavaliers = {"Darius Garland", "Collin Sexton", "Isaac Okoro", "Evan Mobley", "Jarret Allen"};
+  public String [] MilwaukeeBucks = {"Jrue Holiday", "Grayson Allen", "Khris Middleton", "Giannis Antentokounmpo", "Bobby Portis"};
+  public String [] Philadelphia76ers = {"Ben Simmons", "Seth Curry", "Tyrese Maxey", "Tobias Harris", "Joel Embiid"};
+  public String [] CharlotteHornets = {"Lamelo Ball", "Terry Rozier", "Gordon Hayward", "Miles Bridges", "Mason Plumlee"};
+  public String [] WashingtonWizards = {"Spencer Dinwiddie", "Bradley Beal", "Kentavious Caldwell Pope", "Kyle Kuzma", "Daniel Gafford"};
+  public String [] TorontoRaptors = {"Fred Vanvleet", "Gary Trent Jr", "OG Anunoby", "Scottie Barnes", "Pascal Siakam"};
+  public String [] BostonCeltics = {"Marcus Smart", "Jaylen Brown", "Jason Tatum", "Robert Williams", "Enes Kanter"};
+  public String [] NewYorkKnicks = {"Kemba Walker", "Evan Fournier", "RJ Barrett", "Julius Randle", "Mitchell Robinson"};
+  public String [] AtlantaHawks = {"Trae Young", "Bogdan Bogdanovic", "De'Andre Hunter", "John Collins", "Clint Capela"};
+  public String [] IndianaPacers = {"Malcolm Brogdon", "Caris Levert", "Jeremy Lamb", "Domantas Sabonis", "Myles Turner"};
+  public String [] DetroitPistons = {"Killian Hayes", "Cade Cunningham", "Hamidou Diallo", "Jerami Grant", "Isaiah Stewart"};
+  public String [] OrlandoMagic = {"Cole Anthony", "Jalen Suggs", "Franz Wagner", "Wendell Carter Jr", "Mo Bamba"};
+  public String [] PhoenixSuns = {"Chris Paul", "Devin Booker", "Mikal Bridges", "Jae Crowder", "Deandre Ayton"};
+  public String [] GoldenStateWarriors = {"Steph Curry", "Klay Thompson", "Andrew Wiggins", "Draymond Green", "James Wiseman"};
+  public String [] MemphisGrizzlies = {"Ja Morant", "Desmond Bane", "Kyle Anderson", "Jaren Jackson Jr", "Steven Adams"};
+  public String [] UtahJazz = {"Mike Conley", "Donovan Mitchell", "Bojan Bogdanovic", "Eric Paschall", "Rudy Gobert"};
+  public String [] DallasMavericks = {"Luka Doncic", "Jalen Brunson", "Dorian Finney Smith", "Kristaps Porzingis", "Maxi Kleber"};
+  public String [] DenverNuggets = {"Jamal Murray", "Will Barton", "Michael Porter Jr", "Aaron Gordon", "Nikola Jokic"};
+  public String [] LosAngelesLakers = {"Russell Westbrook", "Malik Monk", "Lebron James", "Stanley Johnson", "Anthony Davis"};
+  public String [] LosAngelesClippers = {"Reggie Jackson", "Paul George", "Kawhi Leonard", "Serge Ibaka", "Ivica Zubac"};
+  public String [] MinnesotaTimberwolves = {"D'Angelo Russell", "Malik Beasley", "Anthony Edwards", "Jarred Vanderbilt", "Karl - Anthony Towns"};
+  public String [] PortlandTrailBlazers = {"Damian Lillard", "CJ Mccollum", "Norman Powell" ,"Larry Nance Jr" , "Jusuf Nurkic"};
+  public String [] SacramentoKings = {"De'Aaron Fox", "Buddy Hield", "Tyrese Haliburton", "Harrison Barnes", "Marvin Bagley Jr"};
+  public String [] SanAntonioSpurs = {"Dejounte Murray", "Derrick White", "Doug McDermott", "Keldon Johnson", "Jakob Poeltl"};
+  public String [] NewOrleansPelicans = {"Devonte Graham", "Brandon Ingram", "Josh Hart", "Zion Williamson", "Jonas Valancunias"};
+  public String [] OklahomaCityThunder = {"Shai Gilgeous Alexander", "Josh Giddey", "Lugentz Dort", "Darius Bazley", "Derrick Favors"};
+  public String [] HoustonCityRockets = {"Kevin Porter Jr", "Jalen Green", "Eric Gordon", "Ja'Sean Tate", "Christian Wood"};
 
-	
   public void settings() {
     size(500, 500);
     String[] fontList = PFont.list();
@@ -31,50 +59,10 @@ public class Sketch2 extends PApplet {
   /**
    * Called repeatedly, anything drawn to the screen goes here
    */
-  public void draw() {
+  public void draw()
+  {
     background(92, 150, 242);
-  }
 
-  public void screen1()
-  {
-    
-  }
-
-  public void screen2()
-  {
-  
-    // players
-    public String [] ChicagoBulls = {"Lonzo Ball", "Demar Derozan", "Zach Lavine", "Nikola Vucevic", "Patrick Williams"};
-    public String [] MiamiHeat = {"Kyle Lowry", "Duncan Robinson", "Jimmy Butler", "PJ Tucker", "Bam Adebayo"};
-    public String [] BrooklynNets = {"Kyrie Irving", "James Harden", "Kevin Durant", "Blake Griffin", "Nic Claxton"};
-    public String [] ClevelandCavaliers = {"Darius Garland", "Collin Sexton", "Isaac Okoro", "Evan Mobley", "Jarret Allen"};
-    public String [] MilwaukeeBucks = {"Jrue Holiday", "Grayson Allen", "Khris Middleton", "Giannis Antentokounmpo", "Bobby Portis"};
-    public String [] Philadelphia76ers = {"Ben Simmons", "Seth Curry", "Tyrese Maxey", "Tobias Harris", "Joel Embiid"};
-    public String [] CharlotteHornets = {"Lamelo Ball", "Terry Rozier", "Gordon Hayward", "Miles Bridges", "Mason Plumlee"};
-    public String [] WashingtonWizards = {"Spencer Dinwiddie", "Bradley Beal", "Kentavious Caldwell Pope", "Kyle Kuzma", "Daniel Gafford"};
-    public String [] TorontoRaptors = {"Fred Vanvleet", "Gary Trent Jr", "OG Anunoby", "Scottie Barnes", "Pascal Siakam"};
-    public String [] BostonCeltics = {"Marcus Smart", "Jaylen Brown", "Jason Tatum", "Robert Williams", "Enes Kanter"};
-    public String [] NewYorkKnicks = {"Kemba Walker", "Evan Fournier", "RJ Barrett", "Julius Randle", "Mitchell Robinson"};
-    public String [] AtlantaHawks = {"Trae Young", "Bogdan Bogdanovic", "De'Andre Hunter", "John Collins", "Clint Capela"};
-    public String [] IndianaPacers = {"Malcolm Brogdon", "Caris Levert", "Jeremy Lamb", "Domantas Sabonis", "Myles Turner"};
-    public String [] DetroitPistons = {"Killian Hayes", "Cade Cunningham", "Hamidou Diallo", "Jerami Grant", "Isaiah Stewart"};
-    public String [] OrlandoMagic = {"Cole Anthony", "Jalen Suggs", "Franz Wagner", "Wendell Carter Jr", "Mo Bamba"};
-    public String [] PhoenixSuns = {"Chris Paul", "Devin Booker", "Mikal Bridges", "Jae Crowder", "Deandre Ayton"};
-    public String [] GoldenStateWarriors = {"Steph Curry", "Klay Thompson", "Andrew Wiggins", "Draymond Green", "James Wiseman"};
-    public String [] MemphisGrizzlies = {"Ja Morant", "Desmond Bane", "Kyle Anderson", "Jaren Jackson Jr", "Steven Adams"};
-    public String [] UtahJazz = {"Mike Conley", "Donovan Mitchell", "Bojan Bogdanovic", "Eric Paschall", "Rudy Gobert"};
-    public String [] DallasMavericks = {"Luka Doncic", "Jalen Brunson", "Dorian Finney Smith", "Kristaps Porzingis", "Maxi Kleber"};
-    public String [] DenverNuggets = {"Jamal Murray", "Will Barton", "Michael Porter Jr", "Aaron Gordon", "Nikola Jokic"};
-    public String [] LosAngelesLakers = {"Russell Westbrook", "Malik Monk", "Lebron James", "Stanley Johnson", "Anthony Davis"};
-    public String [] LosAngelesClippers = {"Reggie Jackson", "Paul George", "Kawhi Leonard", "Serge Ibaka", "Ivica Zubac"};
-    public String [] MinnesotaTimberwolves = {"D'Angelo Russell", "Malik Beasley", "Anthony Edwards", "Jarred Vanderbilt", "Karl - Anthony Towns"};
-    public String [] PortlandTrailBlazers = {"Damian Lillard", "CJ Mccollum", "Norman Powell" ,"Larry Nance Jr" , "Jusuf Nurkic"};
-    public String [] SacramentoKings = {"De'Aaron Fox", "Buddy Hield", "Tyrese Haliburton", "Harrison Barnes", "Marvin Bagley Jr"};
-    public String [] SanAntonioSpurs = {"Dejounte Murray", "Derrick White", "Doug McDermott", "Keldon Johnson", "Jakob Poeltl"};
-    public String [] NewOrleansPelicans = {"Devonte Graham", "Brandon Ingram", "Josh Hart", "Zion Williamson", "Jonas Valancunias"};
-    public String [] OklahomaCityThunder = {"Shai Gilgeous Alexander", "Josh Giddey", "Lugentz Dort", "Darius Bazley", "Derrick Favors"};
-    public String [] HoustonCityRockets = {"Kevin Porter Jr", "Jalen Green", "Eric Gordon", "Ja'Sean Tate", "Christian Wood"};
-  
     // Suns
     players[15][0] = "Chris Paul";
     players[15][1] = "Devin Booker";
@@ -166,5 +154,5 @@ public class Sketch2 extends PApplet {
     players[29][3] = "Ja'Sean Tate";
     players[29][4] = "Christian Wood";
   }
-}
+  }
  

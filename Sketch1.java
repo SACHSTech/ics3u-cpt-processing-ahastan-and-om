@@ -13,6 +13,7 @@ public class Sketch1 extends PApplet {
   "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
   public ArrayList <String> possibleTeams = new ArrayList <String>();
   public String[][] players = new String[30][5];
+  public String[][] stats = new String[30][5];
   public int[] rand = new int [12];
   public String playerTeam;
   public int playerTeamCount;
@@ -242,6 +243,7 @@ public class Sketch1 extends PApplet {
     fill(18, 109, 128);
     text("BACK", 230, 410, 92, 225);
 
+    // Player Teams
     //bulls
     players[0][0] = "Lonzo Ball";
     players[0][1] = "Demar Derozan";
@@ -458,6 +460,22 @@ public class Sketch1 extends PApplet {
     players[29][2] = "Eric Gordon"; 
     players[29][3] = "Ja'Sean Tate";
     players[29][4] = "Christian Wood";
+
+    // Stats
+
+    //bulls
+    stats[0][0] = "PPG: 13.0, RPG: 5.4, AST: 5.1, FG3%: 42.3%, FG%: 42.3%, FT%: 75.0%";
+    stats[0][1] = "PPG: 26.3, RPG: 5.0, AST: 4.8, FG3%: 33.3%, FG%: 49.5%, FT%: 85.5%";
+    stats[0][2] = "PPG: 24.9, RPG: 4.8, AST: 4.2, FG3%: 40.8%, FG%: 48.7%, FT%: 86.8%";
+    stats[0][3] = "PPG: 16.5, RPG: 11.3, AST: 3.5, FG3%: 33.2%, FG%: 43.4%, FT%: 74.1%";
+    stats[0][4] = "PPG: 6,6, RPG: 2.2, AST: 0.6, FG3%: 50.0%, FG%: 56.5%, FT%: 100.0%";
+
+    //heat
+    stats[1][0] = "PPG: 13.4, RPG: 4.5, AST: 8.3, FG3%: 32.7%, FG%: 41.2%, FT%: 84.7%";
+    stats[1][1] = "PPG: 11.8, RPG: 3.2, AST: 1.5, FG3%: 35.8%, FG%: 39.3%, FT%: 80.0%";
+    stats[1][2] = "PPG: 21.4, RPG: 6.0, AST: 6.1, ";
+    stats[1][3] =
+    stats[1][4] =
 
 
     for (int p = 0; p <= 29; p++)
