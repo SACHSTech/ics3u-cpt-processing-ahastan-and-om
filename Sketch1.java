@@ -20,7 +20,9 @@ public class Sketch1 extends PApplet {
   public boolean rosterScreenMove = false;
   public boolean continueMove = false;
   public boolean playMove = false;
+  public boolean returnToHome = false;
   public int gameCycle = 0;
+  public boolean scheduleRun = false;
 
 	
   public void settings() {
@@ -61,6 +63,10 @@ public class Sketch1 extends PApplet {
         if (playMove == true)
         {
           playFunction();
+          if (returnToHome == true)
+          {
+            screen2();
+          }
         }
       }
     } 
@@ -105,18 +111,21 @@ public class Sketch1 extends PApplet {
 
     if(continueMove == true)
       {
+        //Going Back
         if (mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
         {
           continueMove = false;
         }
 
-        if (mouseX >= 330 && mouseX <= 450 && mouseY >= 330 && mouseY <= 380)
+        //Play 
+        else if (mouseX >= 330 && mouseX <= 450 && mouseY >= 330 && mouseY <= 380)
         {
           playMove = true;
           if (mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
           {
             playMove = false;
-            
+            continueMove = false;
+            returnToHome = true;
           }
         }
       }
@@ -198,7 +207,8 @@ public class Sketch1 extends PApplet {
     fill(18, 109, 128);
     text("CONTINUE", 320, 410, 92, 225);
 
-    if (gameCycle == 0){
+    if (scheduleRun == false)
+    {
       for (int i = 0; i <= 11; i++)
       {
         if (!playerTeam.equals(teams[rand[i]]))
@@ -206,7 +216,8 @@ public class Sketch1 extends PApplet {
           possibleTeams.add(teams[rand[i]]);
         }
       }
-  }
+      scheduleRun = true;
+    }
 
     printArray(possibleTeams);
     int i = 0;
@@ -502,7 +513,7 @@ public class Sketch1 extends PApplet {
 
     rect (180, 400, 120, 50);
     textFont(text, 30);
-    fill(18, 109, 128);
+    noFill();
     text("BACK", 230, 410, 92, 225);
     
   }
