@@ -23,7 +23,7 @@ public class Sketch1 extends PApplet {
   public boolean playMove = false;
   public boolean returnToHome = false;
   public int gameCycle = 0;
-  public boolean scheduleRun = false;
+  public boolean scheduleRun = false; 
 
 	
   public void settings() {
@@ -464,18 +464,42 @@ public class Sketch1 extends PApplet {
     // Stats
 
     //bulls
-    stats[0][0] = "PPG: 13.0, RPG: 5.4, AST: 5.1, FG3%: 42.3%, FG%: 42.3%, FT%: 75.0%";
-    stats[0][1] = "PPG: 26.3, RPG: 5.0, AST: 4.8, FG3%: 33.3%, FG%: 49.5%, FT%: 85.5%";
-    stats[0][2] = "PPG: 24.9, RPG: 4.8, AST: 4.2, FG3%: 40.8%, FG%: 48.7%, FT%: 86.8%";
-    stats[0][3] = "PPG: 16.5, RPG: 11.3, AST: 3.5, FG3%: 33.2%, FG%: 43.4%, FT%: 74.1%";
-    stats[0][4] = "PPG: 6,6, RPG: 2.2, AST: 0.6, FG3%: 50.0%, FG%: 56.5%, FT%: 100.0%";
+    stats[0][0] = "PPG: 13.0, RPG: 5.4, AST: 5.1, FG%: 42.3%, FT%: 75.0%, FG3%: 42.3%" ;
+    stats[0][1] = "PPG: 26.3, RPG: 5.0, AST: 4.8, FG%: 49.5%, FT%: 85.5%, FG3%: 33.3%";
+    stats[0][2] = "PPG: 24.9, RPG: 4.8, AST: 4.2, FG%: 48.7%, FT%: 86.8%, FG3%: 40.8% ";
+    stats[0][3] = "PPG: 16.5, RPG: 11.3, AST: 3.5, FG%: 43.4%, FT%: 74.1%, FG3%: 33.2%";
+    stats[0][4] = "PPG: 6,6, RPG: 2.2, AST: 0.6, FG%: 56.5%, FT%: 100.0%, FG3%: 50.0%" ;
 
     //heat
-    stats[1][0] = "PPG: 13.4, RPG: 4.5, AST: 8.3, FG3%: 32.7%, FG%: 41.2%, FT%: 84.7%";
-    stats[1][1] = "PPG: 11.8, RPG: 3.2, AST: 1.5, FG3%: 35.8%, FG%: 39.3%, FT%: 80.0%";
-    stats[1][2] = "PPG: 21.4, RPG: 6.0, AST: 6.1, FG3%: 24.1%, FG%: 47.7%, FT%: 88.1%";
-    stats[1][3] = "PPG: 8.1, RPG: 5.6, AST: 2.2, FG3%: 45.9%, FG%: 49.2%, FT%: 69.2%";
-    stats[1][4] = "PPG: 18.5, RPG: 9.9, AST: 3.3, FG3%: 0.0%, FG%: 52.1%, FT%: 77.0%";
+    stats[1][0] = "PPG: 13.4, RPG: 4.5, AST: 8.3, FG%: 41.2%, FT%: 84.7%, FG3%: 32.7%";
+    stats[1][1] = "PPG: 11.8, RPG: 3.2, AST: 1.5, FG%: 39.3%, FT%: 80.0%, FG3%: 35.8% ";
+    stats[1][2] = "PPG: 21.4, RPG: 6.0, AST: 6.1, FG%: 47.7%, FT%: 88.1%, FG3%: 24.1%";
+    stats[1][3] = "PPG: 8.1, RPG: 5.6, AST: 2.2, FG%: 49.2%, FT%: 69.2%, FG3%: 45.9%";
+    stats[1][4] = "PPG: 18.5, RPG: 9.9, AST: 3.3, FG%: 52.1%, FT%: 77.0%, FG3%: 0.0%";
+
+    //nets
+    stats[2][0] = "PPG: 23.4, RPG: 4.9, AST: 5.1, FG%: 50.4%, FT%: 100.0%, FG3%: 36.6%";
+    stats[2][1] = "PPG: 22.7, RPG: 8.0, AST: 10.1, FG%: 41.9%, FT%: 41.9%, FG3%: 33.8% ";
+    stats[2][2] = "PPG: 29.3, RPG: 7.4, AST: 5.8, FG%: 52.0%, FT%: 89.4%, FG3%: 37.2%";
+    stats[2][3] = "PPG: 6.0, RPG: 4.4, AST: 2.1, FG%: 37.9%, FT%: 72.7%, FG3%: 20.8%";
+    stats[2][4] = "PPG: 9.2, RPG: 5.5, AST: 1.0, FG%: 65.6%, FT%: 61.5%, FG3%: N/A";
+    
+    //cavs
+    stats[3][0] = "PPG: 19.7, RPG: 3.3, AST: 8.2, FG%: 46.4%, FT%: 91.3%, FG3%: 36.0%";
+    stats[3][1] = "PPG: 16.0, RPG: 3.3, AST: 2.1, FG%: 45.0%, FT%: 74.4%, FG3%: 24.4% ";
+    stats[3][2] = "PPG: 9.2, RPG: 3.4, AST: 1.8, FG%: 45.4%, FT%: 73.4%, FG3%: 28.3%";
+    stats[3][3] = "PPG: 15.0, RPG: 8.2, AST: 2.7, FG%: 51.0%, FT%: 67.4%, FG3%: 30.4%";
+    stats[3][4] = "PPG: 16.3, RPG: 11.0, AST: 1.9, FG%: 69.5%, FT%: 68.4%, FG3%: 12.5%";
+
+    //bucks
+    stats[4][0] = "PPG: 18.2, RPG: 4.6, AST: 6.4, FG%: 49.3%, FT%: 74.2%, FG3%: 38.6%";
+    stats[4][1] = "PPG: 11.8, RPG: 3.4, AST: 1.3, FG%: 42.3%, FT%: 85.7%, FG3%: 39.1% ";
+    stats[4][2] = "PPG: 20.1, RPG: 5.7, AST: 5.3, FG%: 44.2%, FT%: 88.6%, FG3%: 39.1%";
+    stats[4][3] = "PPG: 28.6, RPG: 11.3, AST: 6.0, FG%: 53.1%, FT%: 71.4%, FG3%: 28.2%";
+    stats[4][4] = "PPG: 15.0, RPG: 9.5, AST: 1.3, FG%: 47.3%, FT%: 76.9%, FG3%: 41.4";
+
+    
+
 
 
     for (int p = 0; p <= 29; p++)
