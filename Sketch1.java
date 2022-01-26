@@ -473,9 +473,9 @@ public class Sketch1 extends PApplet {
     //heat
     stats[1][0] = "PPG: 13.4, RPG: 4.5, AST: 8.3, FG3%: 32.7%, FG%: 41.2%, FT%: 84.7%";
     stats[1][1] = "PPG: 11.8, RPG: 3.2, AST: 1.5, FG3%: 35.8%, FG%: 39.3%, FT%: 80.0%";
-    stats[1][2] = "PPG: 21.4, RPG: 6.0, AST: 6.1, ";
-    stats[1][3] =
-    stats[1][4] =
+    stats[1][2] = "PPG: 21.4, RPG: 6.0, AST: 6.1, FG3%: 24.1%, FG%: 47.7%, FT%: 88.1%";
+    stats[1][3] = "PPG: 8.1, RPG: 5.6, AST: 2.2, FG3%: 45.9%, FG%: 49.2%, FT%: 69.2%";
+    stats[1][4] = "PPG: 18.5, RPG: 9.9, AST: 3.3, FG3%: 0.0%, FG%: 52.1%, FT%: 77.0%";
 
 
     for (int p = 0; p <= 29; p++)
