@@ -506,7 +506,7 @@ public class Sketch2 extends PApplet {
   stats[21][4] = "PPG: 23.3, RPG : 9.9, APG : 2.9, FG : 52.1%, FT : 72.7%, FG3 : 17.9% ";
   // Clippers
   stats[22][0] = "PPG: 16.9, RPG : 3.4, APG : 4.2, FG : 39.3%, FT : 84.8%, FG3 : 32.5% ";
-  stats[22][1] = "PPG: 15.3, RPG : 4.8, APG : 4.2, FG : 43.4%, FT : 78.8%, FG3 : 37% ";
+  stats[22][1] = "PPG: 7, RPG : 2.9, APG : 1.6, FG : 45.4%, FT : 88%, FG3 : 38.2% ";
   stats[22][2] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
   stats[22][3] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
   stats[22][4] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
@@ -521,10 +521,10 @@ public class Sketch2 extends PApplet {
   stats[24][1] = "PPG: 15.3, RPG : 4.8, APG : 4.2, FG : 43.4%, FT : 78.8%, FG3 : 37% ";
   stats[24][2] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
   stats[24][3] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
-  stats[24][4] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
+  stats[24][4] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% "; 
     
 
-
+ 
     for (int p = 0; p <= 29; p++)
     {
       if (playerTeamCount == p)
