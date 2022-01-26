@@ -436,14 +436,14 @@ public class Sketch2 extends PApplet {
     // Spurs
     players[26][0] = "Dejounte Murray";
     players[26][1] = "Derrick White";
-    players[26][2] = "Keldon Johnson"; 
+    players[26][2] = "Doug McDermott"; 
     players[26][3] = "Keldon Johnson";    
     players[26][4] = "Jakob Poeltl";
     
     // Pelicans
     players[27][0] = "Devonte Graham";
-    players[27][1] = "Brandon Ingram";
-    players[27][2] = "Michael Porter Jr"; 
+    players[27][1] = "Nickeil Alexander Walker";
+    players[27][2] = "Brandon Ingram"; 
     players[27][3] = "Josh Hart";
     players[27][4] = "Jonas Valancunias"; 
     
@@ -468,18 +468,18 @@ public class Sketch2 extends PApplet {
   stats[15][2] = "PPG: 12.1, RPG : 4.1, APG : 2, FG : 50.6%, FT : 85.7%, FG3 : 37.5% ";
   stats[15][3] = "PPG: 9.3, RPG : 4.9, APG : 2, FG : 40.8%, FT : 80.4%, FG3 : 36.1% ";
   stats[15][4] = "PPG: 16.8, RPG : 10.6, APG : 1.5, FG : 63.7%, FT : 71.3%, FG3 : 25% ";
-  // warriors
+  // Warriors
   stats[16][0] = "PPG: 26, RPG : 5.3, APG : 6.2, FG : 41.6%, FT : 91.3%, FG3 : 37.6% ";
   stats[16][1] = "PPG: 14.7, RPG : 2.8, APG : 2, FG : 37.2%, FT : 100%, FG3 : 30.2% ";
   stats[16][2] = "PPG: 18.2, RPG : 4.2, APG : 2, FG : 48.2%, FT : 66.9%, FG3 : 40.9% ";
   stats[16][3] = "PPG: 7.9, RPG : 7.6, APG : 7.4, FG : 53.7%, FT : 59.7%, FG3 : 28.6% ";
   stats[16][4] = "PPG: 11.5, RPG : 5.8, APG : 0.7, FG : 51.9%, FT : 62.8%, FG3 : 31.6% ";
   // Grizzlies
-  stats[17][0] = "PPG: 25.3, RPG : 6, APG : 6.9, FG : 48.7%, FT : 91.3%, FG3 : 37.6% ";
+  stats[17][0] = "PPG: 25.3, RPG : 6, APG : 6.9, FG : 48.7%, FT : 91.3%, FG3 : 35% ";
   stats[17][1] = "PPG: 17.7, RPG : 4.4, APG : 2.4, FG : 47%, FT : 88.6%, FG3 : 42% ";
   stats[17][2] = "PPG: 8.2, RPG : 5.3, APG : 2.6, FG : 43.6%, FT : 66.1%, FG3 : 35.1% ";
   stats[17][3] = "PPG: 16.4, RPG : 5.7, APG : 1, FG : 41%, FT : 81.4%, FG3 : 31.3% ";
-  stats[17][4] = "PPG: 26, RPG : 5.3, APG : 6.2, FG : 41.6%, FT : 91.3%, FG3 : 37.6% ";
+  stats[17][4] = "PPG: 6.7, RPG : 9.3, APG : 3, FG : 51.6%, FT : 57.1%, FG3 : -% ";
   // Jazz
   stats[18][0] = "PPG: 14, RPG : 3, APG : 5.2, FG : 42.4%, FT : 82.4%, FG3 : 42.4% ";
   stats[18][1] = "PPG: 25.5, RPG : 4, APG : 5.2, FG : 45%, FT : 87.6%, FG3 : 33.9% ";
@@ -507,21 +507,51 @@ public class Sketch2 extends PApplet {
   // Clippers
   stats[22][0] = "PPG: 16.9, RPG : 3.4, APG : 4.2, FG : 39.3%, FT : 84.8%, FG3 : 32.5% ";
   stats[22][1] = "PPG: 7, RPG : 2.9, APG : 1.6, FG : 45.4%, FT : 88%, FG3 : 38.2% ";
-  stats[22][2] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
-  stats[22][3] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
-  stats[22][4] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
+  stats[22][2] = "PPG: 15.5, RPG : 5.2, APG : 2.2, FG : 41.7%, FT : 75%, FG3 : 29.1% ";
+  stats[22][3] = "PPG: 6.4, RPG : 4.2, APG : 1.1, FG : 46.5%, FT : 63.6%, FG3 : 40.4% ";
+  stats[22][4] = "PPG: 9.9, RPG : 8.2, APG : 1.2, FG : 67.4%, FT : 74.4%, FG3 : - ";
   // Timberwolves
-  stats[23][0] = "PPG: 12.6, RPG : 2.8, APG : 4.1, FG : 47%, FT : 78.4%, FG3 : 37.3% ";
-  stats[23][1] = "PPG: 15.3, RPG : 4.8, APG : 4.2, FG : 43.4%, FT : 78.8%, FG3 : 37% ";
-  stats[23][2] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
-  stats[23][3] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
-  stats[23][4] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
+  stats[23][0] = "PPG: 19.1, RPG : 3.6, APG : 7, FG : 41.1%, FT : 81.7%, FG3 : 35.3% ";
+  stats[23][1] = "PPG: 12, RPG : 3.1, APG : 1.6, FG : 37.3%, FT : 72.4%, FG3 : 34.9% ";
+  stats[23][2] = "PPG: 22.7, RPG : 5.2, APG : 3.5, FG : 44.6%, FT : 79.3%, FG3 : 37.6% ";
+  stats[23][3] = "PPG: 7, RPG : 9.2, APG : 1.5, FG : 59.1%, FT : 64.7%, FG3 : 20% ";
+  stats[23][4] = "PPG: 24.1, RPG : 9.4, APG : 3.6, FG : 51.6%, FT : 81.1%, FG3 : 41 ";
   // Blazers
-  stats[24][0] = "PPG: 12.6, RPG : 2.8, APG : 4.1, FG : 47%, FT : 78.4%, FG3 : 37.3% ";
-  stats[24][1] = "PPG: 15.3, RPG : 4.8, APG : 4.2, FG : 43.4%, FT : 78.8%, FG3 : 37% ";
-  stats[24][2] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
-  stats[24][3] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
-  stats[24][4] = "PPG: 25.6, RPG : 8.8, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% "; 
+  stats[24][0] = "PPG: 24, RPG : 4.1, APG : 7.3, FG : 40.2%, FT : 87.8%, FG3 : 32.4% ";
+  stats[24][1] = "PPG: 20.4, RPG : 4.2, APG : 4.4, FG : 43%, FT : 71.2%, FG3 : 40.2% ";
+  stats[24][2] = "PPG: 18.3, RPG : 2.9, APG : 2.1, FG : 45.3%, FT : 82.2%, FG3 : 40.1% ";
+  stats[24][3] = "PPG: 6.9, RPG : 5.6, APG : 2, FG : 51.5%, FT : 65.3%, FG3 : 30.6% ";
+  stats[24][4] = "PPG: 14.4, RPG : 10.9, APG : 2.8, FG : 53.7%, FT : 69.3%, FG3 : 20.5% "; 
+  // Kings
+  stats[25][0] = "PPG: 21, RPG : 3.8, APG : 5.2, FG : 45.8%, FT : 74.4%, FG3 : 24.8% ";
+  stats[25][1] = "PPG: 15.1, RPG : 4, APG : 2, FG : 38.9%, FT : 86.7%, FG3 : 38% ";
+  stats[25][2] = "PPG: 13.8, RPG : 4, APG : 7.2, FG : 46.6%, FT : 81.3%, FG3 : 42.7% ";
+  stats[25][3] = "PPG: 16.3, RPG : 6, APG : 2.4, FG : 44.8%, FT : 83%, FG3 : 40.6% ";
+  stats[25][4] = "PPG: 9.4, RPG : 7.2, APG : 0.6, FG : 46.1%, FT : 74.5%, FG3 : 24.1% "; 
+  // Spurs
+  stats[26][0] = "PPG: 19.3, RPG : 8.4, APG : 9, FG : 45.1%, FT : 73.5%, FG3 : 31.9% ";
+  stats[26][1] = "PPG: 14.2, RPG : 3.5, APG : 5.6, FG : 41.7%, FT : 85.8%, FG3 : 29.5% ";
+  stats[26][2] = "PPG: 11.4, RPG : 2.5, APG : 1.2, FG : 45.8%, FT : 70.4%, FG3 : 41.5% ";
+  stats[26][3] = "PPG: 14.9, RPG : 6.2, APG : 1.7, FG : 46.7%, FT : 70.7%, FG3 : 44.2% ";
+  stats[26][4] = "PPG: 12.9, RPG : 9.1, APG : 2.7, FG : 60.1%, FT : 43.8%, FG3 : - "; 
+  // Pelicans
+  stats[27][0] = "PPG: 14, RPG : 2.6, APG : 4.5, FG : 37.1%, FT : 83.8%, FG3 : 36.3% ";
+  stats[27][1] = "PPG: 13.1, RPG : 3.4, APG : 2.7, FG : 37.3%, FT : 71.4%, FG3 : 31.5% ";
+  stats[27][2] = "PPG: 22.4, RPG : 6.1, APG : 5.2, FG : 44.3%, FT : 81.8%, FG3 : 34.5% ";
+  stats[27][3] = "PPG: 13.5, RPG : 7.6, APG : 4.2, FG : 51.6%, FT : 75.2%, FG3 : 33.3% ";
+  stats[27][4] = "PPG: 18.3, RPG : 12, APG : 2.5, FG : 52.6%, FT : 81.9%, FG3 : 41.7% "; 
+  // Thunder
+  stats[28][0] = "PPG: 23, RPG : 4.8, APG : 5.5, FG : 42.4%, FT : 82.8%, FG3 : 36.2% ";
+  stats[28][1] = "PPG: 11.5, RPG : 7.4, APG : 6.2, FG : 40.4%, FT : 66%, FG3 : 26.6% ";
+  stats[28][2] = "PPG: 16.1, RPG : 4, APG : 1.6, FG : 39.6%, FT : 85.1%, FG3 : 32.7% ";
+  stats[28][3] = "PPG: 6.9, RPG : 5.6, APG : 1.1, FG : 38.8%, FT : 68.7%, FG3 : 26% ";
+  stats[28][4] = "PPG: 5.1, RPG : 4.7, APG : 0.8, FG : 49.7%, FT : 55.6%, FG3 : 16.7% "; 
+  // Rockets
+  stats[29][0] = "PPG: 13.2, RPG : 4.2, APG : 6, FG : 38.1%, FT : 64.2%, FG3 : 34.4% ";
+  stats[29][1] = "PPG: 14.2, RPG : 3.2, APG : 2.2, FG : 37.4%, FT : 82.9%, FG3 : 29.1% ";
+  stats[29][2] = "PPG: 14.6, RPG : 2, APG : 3.2, FG : 50%, FT : 74.5%, FG3 : 44.5% ";
+  stats[29][3] = "PPG: 12.6, RPG : 5.7, APG : 3.1, FG : 50.2%, FT : 70.2%, FG3 : 30.3% ";
+  stats[29][4] = "PPG: 17.4, RPG : 10.2, APG : 2.1, FG : 48.2%, FT : 61.5%, FG3 : 36.6% "; 
     
 
  
