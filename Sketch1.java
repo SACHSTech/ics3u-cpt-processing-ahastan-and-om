@@ -355,14 +355,7 @@ public class Sketch1 extends PApplet {
     players[15][2] = "Mikal Bridges";
     players[15][3] = "Jae Crowder";
     players[15][4] = "Deandre Ayton";
-
-    // Suns
-    players[15][0] = "Chris Paul";
-    players[15][1] = "Devin Booker";
-    players[15][2] = "Mikal Bridges";
-    players[15][3] = "Jae Crowder";
-    players[15][4] = "Deandre Ayton";
-    
+   
     // Warriors
     players[16][0] = "Steph Curry";
     players[16][1] = "Klay Thompson";
@@ -496,37 +489,100 @@ public class Sketch1 extends PApplet {
     stats[4][1] = "PPG: 11.8, RPG: 3.4, AST: 1.3, FG%: 42.3%, FT%: 85.7%, FG3%: 39.1% ";
     stats[4][2] = "PPG: 20.1, RPG: 5.7, AST: 5.3, FG%: 44.2%, FT%: 88.6%, FG3%: 39.1%";
     stats[4][3] = "PPG: 28.6, RPG: 11.3, AST: 6.0, FG%: 53.1%, FT%: 71.4%, FG3%: 28.2%";
-    stats[4][4] = "PPG: 15.0, RPG: 9.5, AST: 1.3, FG%: 47.3%, FT%: 76.9%, FG3%: 41.4";
+    stats[4][4] = "PPG: 15.0, RPG: 9.5, AST: 1.3, FG%: 47.3%, FT%: 76.9%, FG3%: 41.4%";
 
-    
+    //76ers
+    stats[5][0] = "PPG: 15.9, RPG: 8.1, AST: 7.7, FG%: 56.0%, FT%: 59.7%, FG3%: 14.7%";
+    stats[5][1] = "PPG: 15.8, RPG: 3.4, AST: 4.0, FG%: 50.9%, FT%: 87.7%, FG3%: 41.7% ";
+    stats[5][2] = "PPG: 16.6, RPG: 3.4, AST: 4.5, FG%: 46.5%, FT%: 87.9%, FG3%: 41.0%";
+    stats[5][3] = "PPG: 18.6, RPG: 7.5, AST: 3.8, FG%: 46.9%, FT%: 85.5%, FG3%: 32.8%";
+    stats[5][4] = "PPG: 29.0, RPG: 10.8, AST: 4.3, FG%: 49.9%, FT%: 81.9%, FG3%: 38.0%";
+
+    //hornets
+    stats[6][0] = "PPG: 19.1, RPG: 7.2, AST: 7.6, FG%: 41.8%, FT%: 89.0%, FG3%: 35.8%";
+    stats[6][1] = "PPG: 18.3, RPG: 4.1, AST: 4.1, FG%: 43.2%, FT%: 80.0%, FG3%: 37.0% ";
+    stats[6][2] = "PPG: 17.0, RPG: 4.7, AST: 3.7, FG%: 47.1%, FT%: 84.6%, FG3%: 39.7%";
+    stats[6][3] = "PPG: 20.1, RPG: 7.3, AST: 3.5, FG%: 48.6%, FT%: 78.0%, FG3%: 32.2%";
+    stats[6][4] = "PPG: 6.7, RPG: 7.2, AST: 2.7, FG%: 63.2%, FT%: 34.1%, FG3%: 0.0%";
+
+    //wizards
+    stats[7][0] = "PPG: 13.3, RPG: 4.6, AST: 5.7, FG%: 38.8%, FT%: 81.4%, FG3%: 31.4%";
+    stats[7][1] = "PPG: 23.6, RPG: 4.8, AST: 6.5, FG%: 45.5%, FT%: 83.7%, FG3%: 30.1% ";
+    stats[7][2] = "PPG: 11.4, RPG: 3.6, AST: 1.8, FG%: 41.2%, FT%: 87.7%, FG3%: 37.2%";
+    stats[7][3] = "PPG: 15.7, RPG: 8.9, AST: 2.9, FG%: 45.1%, FT%: 68.8%, FG3%: 32.5%";
+    stats[7][4] = "PPG: 9.2, RPG: 6.1, AST: 1.0, FG%: 68.9%, FT%: 75.0%, FG3%: N/A";
+
+    //raptors
+    stats[8][0] = "PPG: 21.7, RPG: 4.7, AST: 7.0, FG%: 42.1%, FT%: 87.0%, FG3%: 39.3%";
+    stats[8][1] = "PPG: 16.6, RPG: 2.7, AST: 2.0, FG%: 41.9%, FT%: 83.8%, FG3%: 37.4% ";
+    stats[8][2] = "PPG: 18.8, RPG: 5.4, AST: 2.4, FG%: 43.3%, FT%: 77.3%, FG3%: 34.2%";
+    stats[8][3] = "PPG: 14.6, RPG: 7.8, AST: 3.4, FG%: 46.9%, FT%: 72.0%, FG3%: 30.6%";
+    stats[8][4] = "PPG: 21.3, RPG: 8.3, AST: 5.1, FG%: 48.3%, FT%: 72.8%, FG3%: 33.3%";
+
+    //celtics
+    stats[9][0] = "PPG: 11.3, RPG: 4.0, AST: 5.4, FG%: 39.2%, FT%: 79.2%, FG3%: 30.3%";
+    stats[9][1] = "PPG: 24.0, RPG: 6.6, AST: 3.0, FG%: 45.4%, FT%: 78.7%, FG3%: 36.4% ";
+    stats[9][2] = "PPG: 26.0, RPG: 8.5, AST: 3.9, FG%: 42.7%, FT%: 84.2%, FG3%: 33.1%";
+    stats[9][3] = "PPG: 9.9, RPG: 9.4, AST: 1.9, FG%: 73.8%, FT%: 69.4%, FG3%: N/A";
+    stats[9][4] = "PPG: 3.7, RPG: 4.6, AST: 0.2, FG%: 53.3%, FT%: 84.6%, FG3%: 25.0%";
+
+    //knicks
+    stats[10][0] = "PPG: 13.3, RPG: 3.3, AST: 3.5, FG%: 41.5%, FT%: 81.4%, FG3%: 39.2%";
+    stats[10][1] = "PPG: 13.5, RPG: 2.8, AST: 1.8, FG%: 41.8%, FT%: 73.4%, FG3%: 38.9% ";
+    stats[10][2] = "PPG: 17.4, RPG: 5.9, AST: 2.6, FG%: 41.9%, FT%: 68.7%, FG3%: 35.4%";
+    stats[10][3] = "PPG: 18.9, RPG: 9.9, AST: 5.1, FG%: 41.2%, FT%: 75.7%, FG3%: 31.1%";
+    stats[10][4] = "PPG: 8.4, RPG: 8.3, AST: 0.4, FG%: 77.9%, FT%: 54.8%, FG3%: N/A";
 
 
-
-    for (int p = 0; p <= 29; p++)
+    for (int p = 0; p <= 5; p++)
     {
       if (playerTeamCount == p)
       {
         textFont(text, 30);
         fill(18, 109, 128);
-        text(players[p][0], 50, 100, 92, 225);
+        text(players[p][0], 50, 25, 300, 225);
+        textFont(text, 18);
+        fill(18, 109, 128);
+        text(stats[p][0], 50, 75, 92, 225);
 
         textFont(text, 30);
         fill(18, 109, 128);
-        text(players[p][1], 200, 100, 92, 225);
+        text(players[p][1], 200, 25, 300, 225);
+        textFont(text, 18);
+        fill(18, 109, 128);
+        text(stats[p][1], 200, 75, 92, 225);
 
         textFont(text, 30);
         fill(18, 109, 128);
-        text(players[p][2], 350, 100, 92, 225);
+        text(players[p][2], 370, 25, 300, 225);
+        textFont(text, 18);
+        fill(18, 109, 128);
+        text(stats[p][2], 370, 75, 92, 225);
 
         textFont(text, 30);
         fill(18, 109, 128);
-        text(players[p][3], 150, 250, 92, 225);
+        text(players[p][3], 50, 250, 300, 225);
+        textFont(text, 18);
+        fill(18, 109, 128);
+        text(stats[p][3], 50, 300, 92, 225);
 
         textFont(text, 30);
         fill(18, 109, 128);
-        text(players[p][4], 275, 250, 92, 225);
+        text(players[p][4], 370, 250, 300, 225);
+        textFont(text, 18);
+        fill(18, 109, 128);
+        text(stats[p][4], 370, 300, 92, 225);
       }
     }
+
+    // for (int i = 0; i <= 29; i++)
+    // {
+    //   if (playerTeamCount == i)
+    //   {
+        
+    //   }
+    // }
+
   }
 
   //Continue Screen
