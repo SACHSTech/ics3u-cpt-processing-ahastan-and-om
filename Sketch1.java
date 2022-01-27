@@ -71,6 +71,78 @@ public class Sketch1 extends PApplet {
             textFont(text, 25);
             fill(18, 109, 128);
             text(stats[i][0], 200, 150, 100, 250);
+            text("BACK", 350, 435);
+            stroke(255);
+            noFill();
+            rect(310, 400, 120, 50);
+          }
+        }
+      }
+      if (playerMove2 == true)
+      {
+        background(92, 150, 242);
+        for (int i = 0; i <= 14; i++)
+        {
+          if (playerTeamCount == i)
+          {
+            textFont(text, 25);
+            fill(18, 109, 128);
+            text(stats[i][1], 200, 150, 100, 250);
+            text("BACK", 350, 435);
+            stroke(255);
+            noFill();
+            rect(310, 400, 120, 50);
+          }
+        }
+      }
+      if (playerMove3 == true)
+      {
+        background(92, 150, 242);
+        for (int i = 0; i <= 14; i++)
+        {
+          if (playerTeamCount == i)
+          {
+            textFont(text, 25);
+            fill(18, 109, 128);
+            text(stats[i][2], 200, 150, 100, 250);
+            text("BACK", 350, 435);
+            stroke(255);
+            noFill();
+            rect(310, 400, 120, 50);
+          }
+        }
+      }
+      if (playerMove4 == true)
+      {
+        background(92, 150, 242);
+        for (int i = 0; i <= 14; i++)
+        {
+          if (playerTeamCount == i)
+          {
+            textFont(text, 25);
+            fill(18, 109, 128);
+            text(stats[i][3], 200, 150, 100, 250);
+            text("BACK", 350, 435);
+            stroke(255);
+            noFill();
+            rect(310, 400, 120, 50);
+          }
+        }
+      }
+      if (playerMove5 == true)
+      {
+        background(92, 150, 242);
+        for (int i = 0; i <= 14; i++)
+        {
+          if (playerTeamCount == i)
+          {
+            textFont(text, 25);
+            fill(18, 109, 128);
+            text(stats[i][4], 200, 150, 100, 250);
+            text("BACK", 350, 435);
+            stroke(255);
+            noFill();
+            rect(310, 400, 120, 50);
           }
         }
       }
@@ -141,10 +213,44 @@ public class Sketch1 extends PApplet {
       {
         playerMove1 = true;
       }
-      if(playerMove1 == true && mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
+      if(playerMove1 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
       {
         playerMove1 = false;
       }
+      if(playerMove2 == false && mouseX >= 190 && mouseX <= 290 && mouseY >= 100 && mouseY <= 150)
+      {
+        playerMove2 = true;
+      }
+      if(playerMove2 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      {
+        playerMove2 = false;
+      }
+      if(playerMove3 == false && mouseX >= 330 && mouseX <= 480 && mouseY >= 15 && mouseY <= 65)
+      {
+        playerMove3 = true;
+      }
+      if(playerMove3 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      {
+        playerMove3 = false;
+      }
+      if(playerMove4 == false && mouseX >= 20 && mouseX <= 170 && mouseY >= 300 && mouseY <= 350)
+      {
+        playerMove4 = true;
+      }
+      if(playerMove4 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      {
+        playerMove4 = false;
+      }
+      if(playerMove5 == false && mouseX >= 330 && mouseX <= 480 && mouseY >= 300 && mouseY <= 350)
+      {
+        playerMove5 = true;
+      }
+      if(playerMove5 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      {
+        playerMove5 = false;
+      }
+
+      
     }
     if(screen1Move == true && mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
       {
@@ -773,9 +879,6 @@ public class Sketch1 extends PApplet {
         textFont(text, 25);
         fill(18, 109, 128);
         text(players[p][0], 50, 25, 300, 225);
-        textFont(text, 18);
-        fill(18, 109, 128);
-        text(stats[p][0], 50, 75, 92, 225);
 
         stroke(225);
         noFill();
@@ -783,9 +886,6 @@ public class Sketch1 extends PApplet {
         textFont(text, 25);
         fill(18, 109, 128);
         text(players[p][1], 200, 110, 300, 225);
-        textFont(text, 18);
-        fill(18, 109, 128);
-        text(stats[p][1], 200, 75, 92, 225);
 
         stroke(225);
         noFill();
@@ -793,29 +893,20 @@ public class Sketch1 extends PApplet {
         textFont(text, 25);
         fill(18, 109, 128);
         text(players[p][2], 340, 25, 300, 225);
-        textFont(text, 18);
-        fill(18, 109, 128);
-        text(stats[p][2], 370, 75, 92, 225);
-
+        
         stroke(225);
         noFill();
         rect(20, 300, 150, 50);
         textFont(text, 25);
         fill(18, 109, 128);
         text(players[p][3], 50, 310, 300, 225);
-        textFont(text, 18);
-        fill(18, 109, 128);
-        text(stats[p][3], 50, 300, 92, 225);
-
+        
         stroke(225);
         noFill();
         rect(330, 300, 150, 50);
         textFont(text, 25);
         fill(18, 109, 128);
         text(players[p][4], 340, 310, 300, 225);
-        textFont(text, 18);
-        fill(18, 109, 128);
-        text(stats[p][4], 370, 300, 92, 225);
       }
     }
 
