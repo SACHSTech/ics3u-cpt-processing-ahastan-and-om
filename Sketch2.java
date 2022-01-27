@@ -349,13 +349,6 @@ public class Sketch2 extends PApplet {
     players[14][3] = "Wendell Carter Jr";
     players[14][4] = "Mo Bamba";
 
-    //suns
-    players[15][0] = "Chris Paul";
-    players[15][1] = "Devin Booker";
-    players[15][2] = "Mikal Bridges";
-    players[15][3] = "Jae Crowder";
-    players[15][4] = "Deandre Ayton";
-
     // Suns
     players[15][0] = "Chris Paul";
     players[15][1] = "Devin Booker";
@@ -502,7 +495,7 @@ public class Sketch2 extends PApplet {
   stats[21][0] = "PPG: 18.6, RPG : 8.1, APG : 7.8, FG : 43.7%, FT : 67.3%, FG3 : 29.6% ";
   stats[21][1] = "PPG: 11.9, RPG : 3, APG : 2.3, FG : 47.7%, FT : 82.4% FG3 : 40.5% ";
   stats[21][2] = "PPG: 29, RPG : 7.7, APG : 8.7, FG : 43.7%, FT : 75%, FG3 : 29.1% ";
-  stats[21][3] = "PPG: 25.6, RPG : 8.8, APG : 6.3, FG : 51.8%, FT : 75.6%, FG3 : 35.5% ";
+  stats[21][3] = "PPG: 6.4, RPG : 2.6, APG : 1.3, FG : 51.6%, FT : 78.9%, FG3 : 35.5% ";
   stats[21][4] = "PPG: 23.3, RPG : 9.9, APG : 2.9, FG : 52.1%, FT : 72.7%, FG3 : 17.9% ";
   // Clippers
   stats[22][0] = "PPG: 16.9, RPG : 3.4, APG : 4.2, FG : 39.3%, FT : 84.8%, FG3 : 32.5% ";
