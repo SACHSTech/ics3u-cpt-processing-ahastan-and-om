@@ -14,6 +14,7 @@ public class Sketch1 extends PApplet {
   public ArrayList <String> possibleTeams = new ArrayList <String>();
   public String[][] players = new String[30][5];
   public String[][] stats = new String[30][5];
+  public String[][] advice = new String[30][1];
   public int[] rand = new int [12];
   public String playerTeam;
   public int playerTeamCount;
@@ -23,7 +24,7 @@ public class Sketch1 extends PApplet {
   public boolean playMove = false;
   public boolean returnToHome = false;
   public int gameCycle = 0;
-  public boolean scheduleRun = false; 
+  public boolean scheduleRun = false;
 
 	
   public void settings() {
@@ -663,12 +664,62 @@ public class Sketch1 extends PApplet {
     stats[29][1] = "PPG: 14.2, RPG : 3.2, APG : 2.2, FG : 37.4%, FT : 82.9%, FG3 : 29.1% ";
     stats[29][2] = "PPG: 14.6, RPG : 2, APG : 3.2, FG : 50%, FT : 74.5%, FG3 : 44.5% ";
     stats[29][3] = "PPG: 12.6, RPG : 5.7, APG : 3.1, FG : 50.2%, FT : 70.2%, FG3 : 30.3% ";
-    stats[29][4] = "PPG: 17.4, RPG : 10.2, APG : 2.1, FG : 48.2%, FT : 61.5%, FG3 : 36.6% "; 
+    stats[29][4] = "PPG: 17.4, RPG : 10.2, APG : 2.1, FG : 48.2%, FT : 61.5%, FG3 : 36.6% ";
+    
+    // Advice
+    //bulls
+    advice[0][0] = "Despite the Bull’s long slump, the 2021 free agency has seemed to revive the once great franchise. With Demar DeRozan performing at a top tier level, the Chicago Bulls are expected to make it deep into the playoffs. Betting Advice: Very Good";
+    
+    //heat
+    advice[1][0] = "The addition of Jimmy Butler and Kyle Lowry has helped the Miami Heat to be Championship contenders. A key player to watch out for is Tyler Herro. Betting Advice: Very Good";
+    
+    //nets
+    advice[2][0] = "Although this franchise has had its ups and downs, it is expected to do very good in the coming years. With their “big three” and a strong core built around them, they pose a threat to the league. Betting Advice: Very Good";
 
-    for (int p = 0; p <= 29; p++)
+    //cavs
+    advice[3][0] = "The Cavs are an interesting franchise. With the addition of many young bright stars such as Evan Mobley and Collins Sexton, they are expected to do well - in the future. Although they remain 5th in the East, they are not contenders, just not yet. Betting Advice: Average";
+
+    //bucks
+    advice[4][0] = "Coming off a strong 2021 season, not to mention winning the championship, the bucks are destined to do good. However, simply put, they are outshined. The trio of Holiday, Middleton and Antetokounmpo can’t exactly compare to the chemistry of some other teams. Betting Advice: Good";
+
+    //76ers
+    advice[5][0] = "We could say that the 76ers motto of “trust the process” has failed miserably. Being the franchise that lost again, then again, then again, it is quite hard to see them flourishing, however Joel Embid and (maybe) Ben Simmons might be able to revive them once again. Betting Advice: Good";
+
+    //hornets
+    advice[6][0] = "Being the younger brother of Lonzo Ball, and part of the Ball family, LaMelo single handedly has been able to give a new light to the franchise. That being said, the Hornets are a very young team and don't have much veteran leadership, so it’s hard to say how this season goes. Betting Advice: Average";
+
+    //wizards
+    advice[7][0] = "Despite having a great start to the season, the Wizards are still 10th in the East. Although the players have been trying their best, especially Bradely Beal, it is still hard to see the Wizards as big contenders, as they simply do not have the players to compete. Betting Advice: Poor";
+
+    //raptors
+    advice[8][0] = "In a current state of what you would call “rebuild” the Raptors are also living in the middle ground. Despite having a roster full of young players with great potential, the Raptors are just in the need of a leader to bring their team together. Key players to look out for are Trent Jr., Anunoby and Barnes. Betting Advice: Average";
+
+    //celtics
+    advice[9][0] = "The Celtics have been stuck in the same situation as the 76ers. Although they have had a great team, they just keep losing, again and again, and being 9  in the conference isn’t making things much better. Jason Tatum still continues to impress however. Betting Advice: Average";
+
+    //knicks
+    advice[10][0] = "Very rarely, will you meet a devoted Knicks fan, but when the Knicks start winning, the world starts winning. This season does not seem to be the case however. Although they did quite well last year, and even made it to the second round of the playoffs, it just seems something is still wrong with the franchise. Key players to look out for are RJ Barret and Julius Randle. Betting Advice: Poor";
+
+    //hawks
+    advice[11][0] = "Although the Hawks are coming off a fantastic playoff run, making them the underdogs in the 2021 playoffs, this chemistry doesn’t seem to be working right now. The Hawks are a young team however, led by young star Trae Young, and it may take some time for this team to develop. Betting Advice: Poor";
+
+    //pacers
+    advice[12][0] = "The Pacers have talent, but the talent is not good enough. Being 13th in the East doesn’t help their playoffs odds, nor their betting odds. Betting Advice: Very Poor";
+
+    //pistons
+    advice[13][0] = "Even though the Pistons struck gold on the draft with Cade Cunningham, not many expected the Pistons to do very well. They do have many young stars such as Cade Cunningham and Jerami Grant. Betting Advice: Very Poor";
+
+    //magic
+    advice[14][0] = "The Magic are currently 9-40, the worst record in the league. It would be safe to say that betting on the Magic would definitely be a risky move, but betting on young star Cole Anthony may not. Betting Advice: Very Poor";
+
+    for (int p = 0; p <= 14; p++)
     {
       if (playerTeamCount == p)
       {
+        textFont(text, 18);
+        fill(18, 109, 128);
+        text(advice[p][0], 50, 75, 92, 225);
+        
         textFont(text, 25);
         fill(18, 109, 128);
         text(players[p][0], 50, 25, 300, 225);
