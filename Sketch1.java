@@ -1,30 +1,22 @@
 import processing.core.PApplet;
 import processing.core.PFont;
-import java.util.ArrayList;
 
 public class Sketch1 extends PApplet {
   PFont text;
   PFont title;
   PFont subtitle;
+  PFont adviceText;
   public String [] teams = {"Chicago Bulls", "Miami Heat", "Brooklyn Nets", "Cleveland Cavaliers", 
   "Milwaukee Bucks", "Philadelphia 76ers", "Charlotte Hornets", "Washington Wizards", "Toronto Raptors", "Boston Celtics", 
   "New York Knicks", "Atlanta Hawks", "Indiana Pacers", "Detroit Pistons", "Orlando Magic", "Phoenix Suns", "Golden State Warriors", "Memphis Grizzlies", "Utah Jazz", "Dallas Mavericks", 
   "Denver Nuggets", "Los Angeles Lakers", "Los Angeles Clippers", "Minnesota Timberwolves", "Portland Trail Blazers", 
   "Sacramento Kings", "San Antonio Spurs", "New Orleans Pelicans", "Oklahoma City Thunder", "Houston City Rockets"};
-  public ArrayList <String> possibleTeams = new ArrayList <String>();
   public String[][] players = new String[30][5];
   public String[][] stats = new String[30][5];
   public String[][] advice = new String[30][1];
-  public int[] rand = new int [12];
   public String playerTeam;
   public int playerTeamCount;
   public boolean screen1Move = false;
-  public boolean rosterScreenMove = true;
-  public boolean continueMove = false;
-  public boolean playMove = false;
-  public boolean returnToHome = false;
-  public int gameCycle = 0;
-  public boolean scheduleRun = false;
   public boolean playerMove1 = false;
   public boolean playerMove2 = false;
   public boolean playerMove3 = false;
@@ -34,12 +26,8 @@ public class Sketch1 extends PApplet {
 	
   public void settings() {
     size(500, 500);
-    String[] fontList = PFont.list();
-    printArray(fontList);
-    for (int i = 0; i < rand.length; i++)
-    {
-      rand[i] = (int) random(0,29);
-    }
+    // String[] fontList = PFont.list();
+    // printArray(fontList);
   }
 
 
@@ -48,6 +36,7 @@ public class Sketch1 extends PApplet {
     subtitle = createFont("DialogInput.italic", 16, true);
     title = createFont("DialogInput.bolditalic", 75);
     text = createFont("Playbill", 75);
+    adviceText = createFont("Modern No. 20", 14);
   }
 
   /**
@@ -64,7 +53,7 @@ public class Sketch1 extends PApplet {
       if (playerMove1 == true)
       {
         background(92, 150, 242);
-        for (int i = 0; i <= 14; i++)
+        for (int i = 0; i <= 29; i++)
         {
           if (playerTeamCount == i)
           {
@@ -81,13 +70,13 @@ public class Sketch1 extends PApplet {
       if (playerMove2 == true)
       {
         background(92, 150, 242);
-        for (int i = 0; i <= 14; i++)
+        for (int i = 0; i <= 29; i++)
         {
           if (playerTeamCount == i)
           {
             textFont(text, 25);
             fill(18, 109, 128);
-            text(stats[i][1], 200, 150, 100, 250);
+            text(stats[i][2], 200, 150, 100, 250);
             text("BACK", 350, 435);
             stroke(255);
             noFill();
@@ -98,7 +87,7 @@ public class Sketch1 extends PApplet {
       if (playerMove3 == true)
       {
         background(92, 150, 242);
-        for (int i = 0; i <= 14; i++)
+        for (int i = 0; i <= 29; i++)
         {
           if (playerTeamCount == i)
           {
@@ -115,7 +104,7 @@ public class Sketch1 extends PApplet {
       if (playerMove4 == true)
       {
         background(92, 150, 242);
-        for (int i = 0; i <= 14; i++)
+        for (int i = 0; i <= 29; i++)
         {
           if (playerTeamCount == i)
           {
@@ -132,7 +121,7 @@ public class Sketch1 extends PApplet {
       if (playerMove5 == true)
       {
         background(92, 150, 242);
-        for (int i = 0; i <= 14; i++)
+        for (int i = 0; i <= 29; i++)
         {
           if (playerTeamCount == i)
           {
@@ -146,25 +135,10 @@ public class Sketch1 extends PApplet {
           }
         }
       }
+      System.out.println(screen1Move);
+      System.out.println(playerMove1);
     }
   }
-      // if (rosterScreenMove == true)
-      // {
-      //   rosterScreen();
-      // }
-      // if(continueMove == true)
-      // {
-      //   continueScreen();
-      //   if (playMove == true)
-      //   {
-      //     playFunction();
-      //     if (returnToHome == true)
-      //     {
-      //       screen2();
-      //     }
-      //   }
-      // }
-  
 
   public void mouseClicked()
   {
@@ -186,26 +160,10 @@ public class Sketch1 extends PApplet {
         }
       }
     }
-
-    // //Homepage commands
-    // if(rosterScreenMove == false && mouseX >= 50 && mouseX <= 170 && mouseY >= 400 && mouseY <= 450)
-    // {
-    //   rosterScreenMove = true;
-    // }
-
-    // if(screen1Move == true && playerMove1 == false && mouseX >= 20 && mouseX <= 170 && mouseY >= 15 && mouseY >= 65)
-    // {
-    //   playerMove1 = true;
-    // }
-
-    // if(playerMove1 == true && mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
-    //   {
-    //     playerMove1 = false;
-    //   }
     
     if(screen1Move == true)
     {
-      if(mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
+      if(mouseX >= 360 && mouseX <= 460 && mouseY >= 430 && mouseY <= 470)
       {
         screen1Move = false;
       }
@@ -233,7 +191,7 @@ public class Sketch1 extends PApplet {
       {
         playerMove3 = false;
       }
-      if(playerMove4 == false && mouseX >= 20 && mouseX <= 170 && mouseY >= 300 && mouseY <= 350)
+      if(playerMove4 == false && mouseX >= 20 && mouseX <= 170 && mouseY >= 160 && mouseY <= 210)
       {
         playerMove4 = true;
       }
@@ -241,7 +199,7 @@ public class Sketch1 extends PApplet {
       {
         playerMove4 = false;
       }
-      if(playerMove5 == false && mouseX >= 330 && mouseX <= 480 && mouseY >= 300 && mouseY <= 350)
+      if(playerMove5 == false && mouseX >= 330 && mouseX <= 480 && mouseY >= 160 && mouseY <= 210)
       {
         playerMove5 = true;
       }
@@ -249,47 +207,18 @@ public class Sketch1 extends PApplet {
       {
         playerMove5 = false;
       }
-
-      
     }
+
     if(screen1Move == true && mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
       {
         screen1Move = false;
       }
-
-    // if(screen1Move == true && mouseX >= )
-
-    // if(continueMove == false && mouseX >= 300 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
-    // {
-    //   continueMove = true;
-    // }
-
-    // if(continueMove == true)
-    //   {
-    //     //Going Back
-    //     if (mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
-    //     {
-    //       continueMove = false;
-    //     }
-
-    //     //Play 
-    //     else if (mouseX >= 330 && mouseX <= 450 && mouseY >= 330 && mouseY <= 380)
-    //     {
-    //       playMove = true;
-    //       if (mouseX >= 180 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
-    //       {
-    //         playMove = false;
-    //         continueMove = false;
-    //         returnToHome = true;
-    //       }
-    //     }
-    //   }
-    
   }
 
   //Introduction Screen
   public void screen1()
   {
+    strokeWeight(2);
     background(92, 150, 242);
     textFont(subtitle, 20);
     fill(0);
@@ -301,8 +230,8 @@ public class Sketch1 extends PApplet {
     fill(18, 109, 128);
     text("CHOOSE A TEAM", 170, 150);
     
-    int count = 0;
     // Team grid
+    int count = 0;
     for (int i = 20; i < 460; i = i + 92)
     {
       for (int j = 175; j < 460; j = j + 50)
@@ -320,82 +249,16 @@ public class Sketch1 extends PApplet {
     }
   }
 
-  //Homepage
-  // public void screen2()
-  // {
-  //   background(92, 150, 242);
-  //   textFont(title, 25);
-  //   fill(255,204,203);
-  //   text("NBA ULTIMATE", 150, 30);
-
-  //   // Game schedule
-  //   stroke(208, 224, 29);
-  //   fill(208, 224, 29);
-  //   rect(50, 50, 400, 100);
-
-  //   stroke(255);
-  //   fill(255);
-  //   line(50, 100, 450, 100);
-
-  //   for(int gameDisplay = 75; gameDisplay < 450; gameDisplay = gameDisplay + 170)
-  //   {
-  //     ellipse(gameDisplay, 100, 40, 20);
-  //   }
-
-  //   //Standings Preview
-  //   stroke(255);
-  //   noFill();
-  //   rect(50, 200, 150, 170);
-
-  //   //continue and roster buttons
-  //   stroke(255);
-  //   noFill();
-  //   rect(50, 400, 120, 50);
-  //   textFont(text, 30);
-  //   fill(18, 109, 128);
-  //   text("ROSTER", 80, 410, 92, 225);
-
-  //   stroke(255);
-  //   noFill();
-  //   rect (300, 400, 120, 50);
-  //   textFont(text, 30);
-  //   fill(18, 109, 128);
-  //   text("CONTINUE", 320, 410, 92, 225);
-
-  //   if (scheduleRun == false)
-  //   {
-  //     for (int i = 0; i <= 11; i++)
-  //     {
-  //       if (!playerTeam.equals(teams[rand[i]]))
-  //       {
-  //         possibleTeams.add(teams[rand[i]]);
-  //       }
-  //     }
-  //     scheduleRun = true;
-  //   }
-
-  //   printArray(possibleTeams);
-  //   int i = 0;
-  //   for (int positionX = 65; positionX < 450; positionX = positionX + 170)
-  //   {
-  //     String team = possibleTeams.get(i);
-  //     textFont(text, 20);
-  //     fill(18, 109, 128);
-  //     text(team, positionX, 100, 92, 225);
-  //     i++;
-  //   }
-  // }
-
   //Roster Screen
   public void rosterScreen()
   {
     background(92, 150, 242);
     stroke(255);
     noFill();
-    rect (180, 400, 120, 50);
+    rect (360, 430, 100, 40);
     textFont(text, 30);
     fill(18, 109, 128);
-    text("BACK", 230, 410, 92, 225);
+    text("BACK", 375, 435, 92, 225);
 
     // Player Teams
     //bulls
@@ -865,110 +728,94 @@ public class Sketch1 extends PApplet {
     //magic
     advice[14][0] = "The Magic are currently 9-40, the worst record in the league. It would be safe to say that betting on the Magic would definitely be a risky move, but betting on young star Cole Anthony may not. Betting Advice: Very Poor";
 
-    for (int p = 0; p <= 14; p++)
+    //suns
+    advice[15][0] = "The Suns are currently one of the best teams in the league. Coming off a finals appearance last season, the Suns have continued to capitalize on their good form, currently sitting at the top of the Western Conference with a record of 38 - 9.  Players like Chris Paul, Devin Booker, and Deandre Ayton are the core of the Suns team, so these are the key guys you want to bet on. Team Betting Level - Very Good";
+
+    //warriors
+    advice[16][0] = " Despite their shooting slumps in recent games, the Warriors are one of the strongest teams in the league. Stephen Curry has been playing at an MVP level for most of the season. Team Betting Level - Very Good";
+    
+    //grizzlies
+    advice[17][0] = "The Grizzlies have been one of the most surprising teams in the NBA this year, sitting at 3rd in the West, with a record of 33-17. Ja Morant has led the team, taking a huge leap statistically, which has placed him in MVP contention. Team Betting Level - Good";
+
+    //jazz
+    advice[18][0] = "The Jazz are another solid team in the west, sitting at 4th with a record of 30-19. Donovan Mitchell and Rudy Gobert are the main players to bet on, both doing very well statistically. For “over/under” with field/goals or points, bet on Donovan Mitchell. For rebounds or double doubles, bet on Rudy Gobert. Team Betting Level - Good";
+
+    //mavericks
+    advice[19][0] = "Despite a tough start to the season, the Mavericks have been able to turn it around, with Luka Doncic and Kristaps Porzingis playing at all-star levels. In every other category, he is a betting “gold mine”. Porzingis is solid for points and rebounds. Team Betting Level - Good";
+
+    //nuggests
+    advice[20][0] = "The Nuggets have had their fair share of struggles without their primary point guard, Jamal Murray. However, with Nikola Jokic in tremendous form, the Nuggets are 6th in the West, and will likely be a playoff team. Nikola Jokic is a solid player in almost every category when it comes to betting. With both Murray and MPJ sidelined, look out for players like Will Barton and Aaron Gordon who will likely have increased production. Team Betting Level - Average";
+
+    //lakers
+    advice[21][0] = "The Lakers have struggled thus far into the season, which has made many question their ability to contend for a championship. Russell Westbrook has struggled, and Anthony Davis has had trouble staying healthy. However, Lebron James continues to shine, even at his age, making him one of the best players to bet on categorically. Despite his shooting woes, Russ is still solid for betting, as his production for assists and rebounds continues to be constant. Team Betting Level - Good";
+
+    //clippers
+    advice[22][0] = "Despite their two stars being sidelined indefinitely, the Clippers have surprisingly been at a .500 record, occupying the 8th spot in the west. Look for players like Reggie Jackson and Marcus Morris to continue thriving with Kawhi and PG out. Team Betting Level - Average";
+
+    //timerwolves
+    advice[23][0] = "The Timberwolves have been a bit better this season, sitting at 7th in the West, with a 24-23 record. D’Angelo Russell, Anthony Edwards, and Karl Anthony Towns are the players to bet on, as they contribute towards most of the team’s scoring. Team Betting Level - Between Average and Good";
+
+    //blazers
+    advice[24][0] = "The Blazers have struggled this year. With Dame out indefinitely, and CJ Mccolum just returning from a major injury, many question if the team will be able to make the playoffs. Norman Powell and Jusuf Nurkic are the players to bet on for now. Team Betting Level - Poor to Average";
+
+    //kings
+    advice[25][0] = "Despite the talent on the roster, the Kings are unlikely to be a playoff team. Still, their players to bet on are Fox, Tyrese Haliburton, and Buddy Hield. If Fox is traded to a playoff team, his production will likely take a small hit, but he should still be a solid overall player. Team Betting Level - Poor";
+
+    //spurs
+    advice[26][0] = "After the departure of Demar Derozan, the Spurs struggle was inevitable, as they are unlikely to qualify for the playoffs. Dejounte Murray is still a solid player to bet on, and continue to watch out for Derrick White and Jakob Poeltl. Team Betting Level - Poor";
+
+    //pelicans
+    advice[27][0] = "With Zion Williamson out without a proper timetable, the Pelicans are unlikely to make the playoffs. However, they still have talented players like Brandon Ingram and Jonas Valancunias, as well as Josh Hart who has stepped up in Zion’s absence. Team Betting Level - Poor";
+    
+    //thunder
+    advice[28][0] = "The Thunder are currently in a rebuilding phase, as they traded almost all of their assets for future draft picks. Shai Gilgeous Alexander and Josh Giddey are the best players to bet on. Team Betting Level - Very Poor";
+
+    //rockets
+    advice[29][0] = "The Rockets are in the same boat as the Thunder, in a rebuilding phase. They have solid talent in Christian Wood, Kevin Porter Jr, and Jalen Green. However, KPJ’s start to the season has been slightly underwhelming, as has Jalen Green. Continue to monitor their progress, and bet on Wood for point and rebound totals. Team Betting Level - Very Poor";
+    
+    for (int p = 0; p <= 29; p++)
     {
       if (playerTeamCount == p)
       {
-        textFont(text, 18);
-        fill(18, 109, 128);
-        text(advice[p][0], 200, 125, 92, 225);
+        textFont(adviceText, 16);
+        fill(74, 52, 50);
+        text(advice[p][0], 25, 250, 450, 400);
         
         stroke(225);
         noFill();
         rect(20, 15, 150, 50);
-        textFont(text, 25);
+        textFont(text, 22);
         fill(18, 109, 128);
         text(players[p][0], 50, 25, 300, 225);
 
         stroke(225);
         noFill();
-        rect(190, 100, 100, 50);
-        textFont(text, 25);
+        rect(330, 15, 150, 50);
+        textFont(text, 22);
         fill(18, 109, 128);
-        text(players[p][1], 200, 110, 300, 225);
+        text(players[p][1], 340, 25, 300, 225);
 
         stroke(225);
         noFill();
-        rect(330, 15, 150, 50);
-        textFont(text, 25);
+        rect(190, 100, 100, 50);
+        textFont(text, 22);
         fill(18, 109, 128);
-        text(players[p][2], 340, 25, 300, 225);
+        text(players[p][2], 200, 110, 300, 225);
         
         stroke(225);
         noFill();
-        rect(20, 300, 150, 50);
-        textFont(text, 25);
+        rect(20, 160, 150, 50);
+        textFont(text, 22);
         fill(18, 109, 128);
-        text(players[p][3], 50, 310, 300, 225);
+        text(players[p][3], 50, 175, 300, 225);
         
         stroke(225);
         noFill();
-        rect(330, 300, 150, 50);
-        textFont(text, 25);
+        rect(330, 160, 150, 50);
+        textFont(text, 22);
         fill(18, 109, 128);
-        text(players[p][4], 340, 310, 300, 225);
+        text(players[p][4], 340, 175, 300, 225);
       }
     }
-
-    // for (int i = 0; i <= 29; i++)
-    // {
-    //   if (playerTeamCount == i)
-    //   {
-        
-    //   }
-    // }
-
   }
-
-  //player Screen
-  public void playerScreen()
-  {
-    background(92, 150, 242);
-  }
-
-  //Continue Screen
-  // public void continueScreen()
-  // {
-  //   background(92, 150, 242);
-  //   stroke(255);
-  //   noFill();
-  //   rect (180, 400, 120, 50);
-  //   textFont(text, 30);
-  //   fill(18, 109, 128);
-  //   text("BACK", 230, 410, 92, 225);
-
-  //   textFont(text, 30);
-  //   fill(18, 109, 128);
-  //   text(playerTeam, 50, 150, 92, 225);
-
-  //   textFont(text, 80);
-  //   fill(18, 109, 128);
-  //   text("VS", 220, 150, 92, 225);
-
-  //   textFont(text, 30);
-  //   fill(18, 109, 128);
-  //   text(possibleTeams.get(gameCycle), 320, 150, 92, 225);
-
-  //   stroke(255);
-  //   noFill();
-  //   rect (330, 330, 120, 50);
-  //   textFont(text, 30);
-  //   fill(18, 109, 128);
-  //   text("PLAY", 370, 340, 92, 225);
-  // }
-
-  // When the user presses play, simulation
-  // public void playFunction()
-  // {
-  //   background(92, 150, 242);
-  //   possibleTeams.remove(gameCycle);
-  //   gameCycle = gameCycle + 1;
-
-  //   rect (180, 400, 120, 50);
-  //   textFont(text, 30);
-  //   noFill();
-  //   text("BACK", 230, 410, 92, 225);
-    
-  // }
-  
-  }
+}
