@@ -161,7 +161,7 @@ public class Sketch1 extends PApplet {
       }
     }
     
-    if(screen1Move == true)
+    else if(screen1Move == true)
     {
       if(mouseX >= 360 && mouseX <= 460 && mouseY >= 430 && mouseY <= 470)
       {
@@ -171,7 +171,7 @@ public class Sketch1 extends PApplet {
       {
         playerMove1 = true;
       }
-      if(playerMove1 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      else if(playerMove1 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
       {
         playerMove1 = false;
       }
@@ -179,7 +179,7 @@ public class Sketch1 extends PApplet {
       {
         playerMove2 = true;
       }
-      if(playerMove2 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      else if(playerMove2 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
       {
         playerMove2 = false;
       }
@@ -187,7 +187,7 @@ public class Sketch1 extends PApplet {
       {
         playerMove3 = true;
       }
-      if(playerMove3 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+     else if(playerMove3 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
       {
         playerMove3 = false;
       }
@@ -195,7 +195,7 @@ public class Sketch1 extends PApplet {
       {
         playerMove4 = true;
       }
-      if(playerMove4 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      else if(playerMove4 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
       {
         playerMove4 = false;
       }
@@ -203,7 +203,7 @@ public class Sketch1 extends PApplet {
       {
         playerMove5 = true;
       }
-      if(playerMove5 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      else if(playerMove5 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
       {
         playerMove5 = false;
       }
