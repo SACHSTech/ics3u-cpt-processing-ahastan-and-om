@@ -25,7 +25,6 @@ public class Sketch2 extends PApplet {
 
 	
   public void settings() {
-    // size
     size(500, 500);
     // String[] fontList = PFont.list();
     // printArray(fontList);
@@ -33,7 +32,6 @@ public class Sketch2 extends PApplet {
 
 
   public void setup() {
-    // text and background setup
     background(92, 150, 242);
     subtitle = createFont("DialogInput.italic", 16, true);
     title = createFont("DialogInput.bolditalic", 75);
@@ -42,8 +40,7 @@ public class Sketch2 extends PApplet {
   }
 
   /**
-   * Draw function which contains intro and home screen, 
-   * as well as the screens for when the user clicks the individual players or teams
+   * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
 
@@ -60,8 +57,8 @@ public class Sketch2 extends PApplet {
         {
           if (playerTeamCount == i)
           {
-            textFont(text, 25);
-            fill(18, 29, 128);
+            textFont(text, 27);
+            fill(18, 109, 128);
             text(stats[i][0], 200, 150, 100, 250);
             text("BACK", 350, 435);
             stroke(255);
@@ -77,8 +74,8 @@ public class Sketch2 extends PApplet {
         {
           if (playerTeamCount == i)
           {
-            textFont(text, 25);
-            fill(18, 29, 128);
+            textFont(text, 27);
+            fill(18, 109, 128);
             text(stats[i][2], 200, 150, 100, 250);
             text("BACK", 350, 435);
             stroke(255);
@@ -94,8 +91,8 @@ public class Sketch2 extends PApplet {
         {
           if (playerTeamCount == i)
           {
-            textFont(text, 25);
-            fill(18, 29, 128);
+            textFont(text, 27);
+            fill(18, 109, 128);
             text(stats[i][2], 200, 150, 100, 250);
             text("BACK", 350, 435);
             stroke(255);
@@ -111,8 +108,8 @@ public class Sketch2 extends PApplet {
         {
           if (playerTeamCount == i)
           {
-            textFont(text, 25);
-            fill(18, 29, 128);
+            textFont(text, 27);
+            fill(18, 109, 128);
             text(stats[i][3], 200, 150, 100, 250);
             text("BACK", 350, 435);
             stroke(255);
@@ -128,8 +125,8 @@ public class Sketch2 extends PApplet {
         {
           if (playerTeamCount == i)
           {
-            textFont(text, 25);
-            fill(18, 29, 128);
+            textFont(text, 27);
+            fill(18, 109, 128);
             text(stats[i][4], 200, 150, 100, 250);
             text("BACK", 350, 435);
             stroke(255);
@@ -164,7 +161,7 @@ public class Sketch2 extends PApplet {
       }
     }
     
-    if(screen1Move == true)
+    else if(screen1Move == true)
     {
       if(mouseX >= 360 && mouseX <= 460 && mouseY >= 430 && mouseY <= 470)
       {
@@ -174,7 +171,7 @@ public class Sketch2 extends PApplet {
       {
         playerMove1 = true;
       }
-      if(playerMove1 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      else if(playerMove1 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
       {
         playerMove1 = false;
       }
@@ -182,7 +179,7 @@ public class Sketch2 extends PApplet {
       {
         playerMove2 = true;
       }
-      if(playerMove2 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      else if(playerMove2 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
       {
         playerMove2 = false;
       }
@@ -190,7 +187,7 @@ public class Sketch2 extends PApplet {
       {
         playerMove3 = true;
       }
-      if(playerMove3 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+     else if(playerMove3 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
       {
         playerMove3 = false;
       }
@@ -198,7 +195,7 @@ public class Sketch2 extends PApplet {
       {
         playerMove4 = true;
       }
-      if(playerMove4 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      else if(playerMove4 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
       {
         playerMove4 = false;
       }
@@ -206,7 +203,7 @@ public class Sketch2 extends PApplet {
       {
         playerMove5 = true;
       }
-      if(playerMove5 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
+      else if(playerMove5 == true && mouseX >= 310 && mouseX <= 420 && mouseY >= 400 && mouseY <= 450)
       {
         playerMove5 = false;
       }
@@ -687,49 +684,49 @@ public class Sketch2 extends PApplet {
     
     // Advice
     //bulls
-    advice[0][0] = "Despite the Bull’s long slump, the 2021 free agency has seemed to revive the once great franchise. With Demar DeRozan performing at a top tier level, the Chicago Bulls are expected to make it deep into the playoffs. Betting Advice: Very Good";
+    advice[0][0] = "Despite the Bull’s long slump, the 2021 free agency has seemed to revive the once great franchise. With Demar DeRozan performing at a top tier level, the Chicago Bulls are expected to make it deep into the playoffs. Key Players to look out for are Demar DeRozan, Zach LaVine and Lonzo Ball. Team Betting Level: Very Good";
     
     //heat
-    advice[1][0] = "The addition of Jimmy Butler and Kyle Lowry has helped the Miami Heat to be Championship contenders. A key player to watch out for is Tyler Herro. Betting Advice: Very Good";
+    advice[1][0] = "The addition of Jimmy Butler and Kyle Lowry has helped the Miami Heat to be Championship contenders. One of the key players to watch out for in this team is Tyler Herro. He is performing up to his expecations, averaging around 20 points per game as a young rookie in the leauge. Team Betting Level: Very Good";
     
     //nets
-    advice[2][0] = "Although this franchise has had its ups and downs, it is expected to do very good in the coming years. With their “big three” and a strong core built around them, they pose a threat to the league. Betting Advice: Very Good";
+    advice[2][0] = "Although this franchise has had its ups and downs, it is expected to do very good, currently and in the future. With their “big three” and a strong core built around them, they pose a threat to the league. A key player that is always good for betting on is Kevin Durant, who racks up insane numbers each game. Team Betting Level: Very Good";
 
     //cavs
-    advice[3][0] = "The Cavs are an interesting franchise. With the addition of many young bright stars such as Evan Mobley and Collins Sexton, they are expected to do well - in the future. Although they remain 5th in the East, they are not contenders, just not yet. Betting Advice: Average";
+    advice[3][0] = "The Cavs are an interesting franchise. With the addition of many young bright stars such as Evan Mobley and Collin Sexton, they are expected to do well - in the future. Although they remain 5th in the East, they are not contenders, just not yet. Team Betting Level: Average";
 
     //bucks
-    advice[4][0] = "Coming off a strong 2021 season, not to mention winning the championship, the bucks are destined to do good. However, simply put, they are outshined. The trio of Holiday, Middleton and Antetokounmpo can’t exactly compare to the chemistry of some other teams. Betting Advice: Good";
+    advice[4][0] = "Coming off a strong 2021 season, not to mention winning the championship, the bucks are destined to do good. However, simply put, they are outshined. The trio of Holiday, Middleton and Antetokounmpo can’t exactly compare to the chemistry of some other teams. Team Betting Level: Good";
 
     //76ers
-    advice[5][0] = "We could say that the 76ers motto of “trust the process” has failed miserably. Being the franchise that lost again, then again, then again, it is quite hard to see them flourishing, however Joel Embid and (maybe) Ben Simmons might be able to revive them once again. Betting Advice: Good";
+    advice[5][0] = "We could say that the 76ers motto of “trust the process” has failed miserably. Being the franchise that lost again, then again, then again, it is quite hard to see them flourishing, however Joel Embid seems to be reviving them once again. This makes him one of the key players to bet on, and also one of the most versatile players in the leauge. Team Betting Level: Good";
 
     //hornets
-    advice[6][0] = "Being the younger brother of Lonzo Ball, and part of the Ball family, LaMelo single handedly has been able to give a new light to the franchise. That being said, the Hornets are a very young team and don't have much veteran leadership, so it’s hard to say how this season goes. Betting Advice: Average";
+    advice[6][0] = "Being the younger brother of Lonzo Ball, and part of the Ball family, LaMelo single handedly has been able to give a new light to the franchise. That being said, the Hornets are a very young team and don't have much veteran leadership, so it’s hard to say how this season goes. Team Betting Level: Average";
 
     //wizards
-    advice[7][0] = "Despite having a great start to the season, the Wizards are still 10th in the East. Although the players have been trying their best, especially Bradely Beal, it is still hard to see the Wizards as big contenders, as they simply do not have the players to compete. Betting Advice: Poor";
+    advice[7][0] = "Despite having a great start to the season, the Wizards are still 10th in the East. Although the players have been trying their best, especially Bradely Beal, it is still hard to see the Wizards as big contenders, as they simply do not have the players to compete. Team Betting Level: Poor";
 
     //raptors
-    advice[8][0] = "In a current state of what you would call “rebuild” the Raptors are also living in the middle ground. Despite having a roster full of young players with great potential, the Raptors are just in the need of a leader to bring their team together. Key players to look out for are Trent Jr., Anunoby and Barnes. Betting Advice: Average";
+    advice[8][0] = "In a current state of what you would call “rebuild” the Raptors are also living in the middle ground. Despite having a roster full of young players with great potential, the Raptors are just in the need of a leader to bring their team together. Key players to look out for are Trent Jr., Anunoby and Barnes. Team Betting Level: Average";
 
     //celtics
-    advice[9][0] = "The Celtics have been stuck in the same situation as the 76ers. Although they have had a great team, they just keep losing, again and again, and being 9  in the conference isn’t making things much better. Jason Tatum still continues to impress however. Betting Advice: Average";
+    advice[9][0] = "The Celtics have been stuck in the same situation as the 76ers. Although they have had a great team, they just keep losing, again and again, and being 9  in the conference isn’t making things much better. Jason Tatum still continues to impress however. Team Betting Level: Average";
 
     //knicks
-    advice[10][0] = "Very rarely, will you meet a devoted Knicks fan, but when the Knicks start winning, the world starts winning. This season does not seem to be the case however. Although they did quite well last year, and even made it to the second round of the playoffs, it just seems something is still wrong with the franchise. Key players to look out for are RJ Barret and Julius Randle. Betting Advice: Poor";
+    advice[10][0] = "Very rarely, will you meet a devoted Knicks fan, but when the Knicks start winning, the world starts winning. This season does not seem to be the case however. Although they did quite well last year, and even made it to the second round of the playoffs, it just seems something is still wrong with the franchise. Key players to look out for are RJ Barret and Julius Randle. Team Betting Level: Poor";
 
     //hawks
-    advice[11][0] = "Although the Hawks are coming off a fantastic playoff run, making them the underdogs in the 2021 playoffs, this chemistry doesn’t seem to be working right now. The Hawks are a young team however, led by young star Trae Young, and it may take some time for this team to develop. Betting Advice: Poor";
+    advice[11][0] = "Although the Hawks are coming off a fantastic playoff run, making them the underdogs in the 2021 playoffs, this chemistry doesn’t seem to be working right now. The Hawks are a young team however, led by young star Trae Young, and it may take some time for this team to develop. Team Betting Level: Poor";
 
     //pacers
-    advice[12][0] = "The Pacers have talent, but the talent is not good enough. Being 13th in the East doesn’t help their playoffs odds, nor their betting odds. Betting Advice: Very Poor";
+    advice[12][0] = "The Pacers have talent, but the talent is not good enough. Being 13th in the East doesn’t help their playoffs odds, nor their betting odds. Team Betting Level: Very Poor";
 
     //pistons
-    advice[13][0] = "Even though the Pistons struck gold on the draft with Cade Cunningham, not many expected the Pistons to do very well. They do have many young stars such as Cade Cunningham and Jerami Grant. Betting Advice: Very Poor";
+    advice[13][0] = "Even though the Pistons struck gold on the draft with Cade Cunningham, not many expected the Pistons to do very well. They do have many young stars such as Cade Cunningham and Jerami Grant. Team Betting Level: Very Poor";
 
     //magic
-    advice[14][0] = "The Magic are currently 9-40, the worst record in the league. It would be safe to say that betting on the Magic would definitely be a risky move, but betting on young star Cole Anthony may not. Betting Advice: Very Poor";
+    advice[14][0] = "The Magic are currently 9-40, the worst record in the league. It would be safe to say that betting on the Magic would definitely be a risky move, but betting on young star Cole Anthony may not. Team Betting Level: Very Poor";
 
     //suns
     advice[15][0] = "The Suns are currently one of the best teams in the league. Coming off a finals appearance last season, the Suns have continued to capitalize on their good form, currently sitting at the top of the Western Conference with a record of 38 - 9.  Players like Chris Paul, Devin Booker, and Deandre Ayton are the core of the Suns team, so these are the key guys you want to bet on. Team Betting Level - Very Good";
@@ -747,10 +744,10 @@ public class Sketch2 extends PApplet {
     advice[19][0] = "Despite a tough start to the season, the Mavericks have been able to turn it around, with Luka Doncic and Kristaps Porzingis playing at all-star levels. In every other category, he is a betting “gold mine”. Porzingis is solid for points and rebounds. Team Betting Level - Good";
 
     //nuggests
-    advice[20][0] = "The Nuggets have had their fair share of struggles without their primary point guard, Jamal Murray. However, with Nikola Jokic in tremendous form, the Nuggets are 6th in the West, and will likely be a playoff team. Nikola Jokic is a solid player in almost every category when it comes to betting. With both Murray and MPJ sidelined, look out for players like Will Barton and Aaron Gordon who will likely have increased production. Team Betting Level - Average";
+    advice[20][0] = "The Nuggets have had their fair share of struggles without their primary point guard, Jamal Murray, however will still be likely to contend. Nikola Jokic is a solid player in almost every category when it comes to betting. Look out for players like Will Barton and Aaron Gordon who will likely have increased production. Team Betting Level - Average";
 
     //lakers
-    advice[21][0] = "The Lakers have struggled thus far into the season, which has made many question their ability to contend for a championship. Russell Westbrook has struggled, and Anthony Davis has had trouble staying healthy. However, Lebron James continues to shine, even at his age, making him one of the best players to bet on categorically. Despite his shooting woes, Russ is still solid for betting, as his production for assists and rebounds continues to be constant. Team Betting Level - Good";
+    advice[21][0] = "The Lakers have struggled thus far into the season, which has made many question their ability to contend for a championship. However, Lebron James continues to shine, even at his age, making him one of the best players to bet on categorically. Despite his shooting woes, Russ is still solid for betting on assists and rebounds. Team Betting Level - Good";
 
     //clippers
     advice[22][0] = "Despite their two stars being sidelined indefinitely, the Clippers have surprisingly been at a .500 record, occupying the 8th spot in the west. Look for players like Reggie Jackson and Marcus Morris to continue thriving with Kawhi and PG out. Team Betting Level - Average";
@@ -818,6 +815,11 @@ public class Sketch2 extends PApplet {
         textFont(text, 22);
         fill(18, 29, 128);
         text(players[p][4], 340, 175, 300, 225);
+
+        textFont(text, 30);
+        fill(18, 109, 128);
+        text("CLICK ON PLAYER ABOVE", 140, 435, 300, 225);
+
       }
     }
   }
