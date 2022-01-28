@@ -57,7 +57,7 @@ public class Sketch1 extends PApplet {
         {
           if (playerTeamCount == i)
           {
-            textFont(text, 25);
+            textFont(text, 27);
             fill(18, 109, 128);
             text(stats[i][0], 200, 150, 100, 250);
             text("BACK", 350, 435);
@@ -74,7 +74,7 @@ public class Sketch1 extends PApplet {
         {
           if (playerTeamCount == i)
           {
-            textFont(text, 25);
+            textFont(text, 27);
             fill(18, 109, 128);
             text(stats[i][2], 200, 150, 100, 250);
             text("BACK", 350, 435);
@@ -91,7 +91,7 @@ public class Sketch1 extends PApplet {
         {
           if (playerTeamCount == i)
           {
-            textFont(text, 25);
+            textFont(text, 27);
             fill(18, 109, 128);
             text(stats[i][2], 200, 150, 100, 250);
             text("BACK", 350, 435);
@@ -108,7 +108,7 @@ public class Sketch1 extends PApplet {
         {
           if (playerTeamCount == i)
           {
-            textFont(text, 25);
+            textFont(text, 27);
             fill(18, 109, 128);
             text(stats[i][3], 200, 150, 100, 250);
             text("BACK", 350, 435);
@@ -125,7 +125,7 @@ public class Sketch1 extends PApplet {
         {
           if (playerTeamCount == i)
           {
-            textFont(text, 25);
+            textFont(text, 27);
             fill(18, 109, 128);
             text(stats[i][4], 200, 150, 100, 250);
             text("BACK", 350, 435);
@@ -219,15 +219,15 @@ public class Sketch1 extends PApplet {
   public void screen1()
   {
     strokeWeight(2);
-    background(92, 150, 242);
+    background(0, 29, 80);
     textFont(subtitle, 20);
-    fill(0);
-    text("Welcome to", 200, 30);
-    textFont(title, 27);
-    fill(0);
-    text("NBA ULTIMATE TEAM SIMULATOR", 40, 60);
+    fill(255,0,26);
+    text("Welcome to", 150, 30);
+    textFont(title, 40);
+    fill(255, 0, 26);
+    text("BETTOR'S HAVEN", 100, 60);
     textFont(text, 35);
-    fill(18, 109, 128);
+    fill(255, 0, 26);
     text("CHOOSE A TEAM", 170, 150);
     
     // Team grid
@@ -241,7 +241,7 @@ public class Sketch1 extends PApplet {
         rect(i,j,92,50);
         
         textFont(text, 22);
-        fill(18, 109, 128);
+        fill(18, 29, 128);
         text(teams[count], i, j, 92, 225);
 
         count++;
@@ -257,7 +257,7 @@ public class Sketch1 extends PApplet {
     noFill();
     rect (360, 430, 100, 40);
     textFont(text, 30);
-    fill(18, 109, 128);
+    fill(18, 29, 128);
     text("BACK", 375, 435, 92, 225);
 
     // Player Teams
@@ -777,48 +777,48 @@ public class Sketch1 extends PApplet {
     {
       if (playerTeamCount == p)
       {
-        textFont(adviceText, 17);
-        fill(74, 52, 50);
+        textFont(adviceText, 20);
+        fill(7,7,7);
         text(advice[p][0], 25, 250, 450, 400);
         
         stroke(225);
         noFill();
         rect(20, 15, 150, 50);
-        textFont(text, 24);
-        fill(18, 109, 128);
+        textFont(text, 22);
+        fill(18, 29, 128);
         text(players[p][0], 50, 25, 300, 225);
 
         stroke(225);
         noFill();
         rect(330, 15, 150, 50);
-        textFont(text, 24);
-        fill(18, 109, 128);
+        textFont(text, 22);
+        fill(18, 29, 128);
         text(players[p][1], 340, 25, 300, 225);
 
         stroke(225);
         noFill();
-        rect(190, 100, 110, 50);
-        textFont(text, 24);
-        fill(18, 109, 128);
+        rect(190, 100, 100, 50);
+        textFont(text, 22);
+        fill(18, 29, 128);
         text(players[p][2], 200, 110, 300, 225);
         
         stroke(225);
         noFill();
         rect(20, 160, 150, 50);
-        textFont(text, 24);
-        fill(18, 109, 128);
+        textFont(text, 22);
+        fill(18, 29, 128);
         text(players[p][3], 50, 175, 300, 225);
         
         stroke(225);
         noFill();
         rect(330, 160, 150, 50);
-        textFont(text, 24);
-        fill(18, 109, 128);
+        textFont(text, 22);
+        fill(18, 29, 128);
         text(players[p][4], 340, 175, 300, 225);
 
         textFont(text, 30);
         fill(18, 109, 128);
-        text("CLICK ON PLAYER ABOVE", 140, 400, 300, 225);
+        text("CLICK ON PLAYER ABOVE", 140, 435, 300, 225);
 
       }
     }
