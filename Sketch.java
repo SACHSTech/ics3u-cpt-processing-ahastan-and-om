@@ -203,7 +203,7 @@ public class Sketch extends PApplet {
       {
         playerMove1 = false;
       }
-      if(playerMove2 == false && mouseX >= 190 && mouseX <= 290 && mouseY >= 100 && mouseY <= 150)
+      if(playerMove2 == false && mouseX >= 190 && mouseX <= 305 && mouseY >= 100 && mouseY <= 150)
       {
         playerMove2 = true;
       }
@@ -836,7 +836,7 @@ public class Sketch extends PApplet {
 
         stroke(225);
         noFill();
-        rect(190, 100, 100, 50);
+        rect(190, 100, 115, 50);
         textFont(text, 22);
         fill(18, 29, 128);
         text(players[p][2], 200, 110, 300, 225);
